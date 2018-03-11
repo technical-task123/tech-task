@@ -1,25 +1,77 @@
-# It Group PHP Developer Technical Task
+Symfony Standard Edition
+========================
 
-## Overview
+**WARNING**: This distribution does not support Symfony 4. See the
+[Installing & Setting up the Symfony Framework][15] page to find a replacement
+that fits you best.
 
-Hello %username%. Here would be your start point in big company. This task is like a game and I hope it would
-be interesting. In any case, imagine a zoo. It contains animals. Animals like birds, fish, etc. These animals have 
-their abilities, for instance, birds can fly, fish can swim, monkeys can walk. Every animal has to eat, that's why 
-every animal has such ability. There are several issues and we hope you'd solve them for us.
-   
-## Instructions
+Welcome to the Symfony Standard Edition - a fully-functional Symfony
+application that you can use as the skeleton for your new applications.
 
-* Create a branch named by your name.surname
-* Look at our code, believe me, it's kinda shitty
-* Make this code as good as you can
-  * Make as many commits as you want
-  * Show us you power
-* Push into a repository
-* Create a Pull Request
-* Wait until our CI commit into your branch a new file with new instructions (in progress, hasn't been done yet)
+For details on how to download and get started with Symfony, see the
+[Installation][1] chapter of the Symfony Documentation.
 
-## Nice to have in result code
+What's inside?
+--------------
 
-* php 7
-* Unit tests
-* docker environment
+The Symfony Standard Edition is configured with the following defaults:
+
+  * An AppBundle you can use to start coding;
+
+  * Twig as the only configured template engine;
+
+  * Doctrine ORM/DBAL;
+
+  * Swiftmailer;
+
+  * Annotations enabled for everything.
+
+It comes pre-configured with the following bundles:
+
+  * **FrameworkBundle** - The core Symfony framework bundle
+
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+
+  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
+    component
+
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
+    sending emails
+
+  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
+    capabilities
+
+  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
+    using the PHP built-in web server
+
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Standard Edition are
+released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  https://symfony.com/doc/3.4/setup.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/3.4/doctrine.html
+[8]:  https://symfony.com/doc/3.4/templating.html
+[9]:  https://symfony.com/doc/3.4/security.html
+[10]: https://symfony.com/doc/3.4/email.html
+[11]: https://symfony.com/doc/3.4/logging.html
+[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
+[15]: https://symfony.com/doc/current/setup.html
