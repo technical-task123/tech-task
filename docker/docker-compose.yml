@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+################################################ NGINX CONTAINER #######################################################
+    nbu-nginx:
+        image: nginx:alpine
+        container_name: nbu_nginx
+        volumes:
+            - ${SOURCE_VOLUME}:/www
+            - ${NGINX_CONFIGURATION}:/etc/nginx/conf.d/default.conf
+        ports:
+            - ${NGINX_PORT}:80
+        links:
+            - nbu-php
+        depends_on:
+            - nbu-php
+        tty: true
+########################################################################################################################
+
+################################################## PHP CONTAINER #######################################################
+    nbu-php:
+        image: panasiukr/php:nbu
+        container_name: nbu_php
+        volumes:
+            - ${SOURCE_VOLUME}:/www
+        tty: true
+########################################################################################################################
