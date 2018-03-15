@@ -22,10 +22,6 @@ foreach ($animalTypes as $type) {
 $expected = \Zoo\Cat::class;
 $actual = get_class(\Zoo\AnimalFactory::getInstance('Cat'));
 
-var_dump($expected);
-var_dump($actual);
-
-
 foreach ($animals as $animal) {
 
     switch (strtolower($animal->getName())) {
