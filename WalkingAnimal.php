@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Animal.php';
-
 abstract class WalkingAnimal extends Animal
 {
     public function walk(): void
@@ -9,9 +7,9 @@ abstract class WalkingAnimal extends Animal
         $this->echo('walks');
     }
 
-    public function doStaff(): void
+    public function doStuff(): void
     {
-        parent::doStaff();
+        parent::doStuff();
         $this->walk();
     }
 }

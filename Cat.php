@@ -1,7 +1,5 @@
 <?php
 
-require_once 'WalkingAnimal.php';
-
 class Cat extends WalkingAnimal
 {
     public function meow(): void
@@ -9,9 +7,9 @@ class Cat extends WalkingAnimal
         $this->echo('meows');
     }
 
-    public function doStaff(): void
+    public function doStuff(): void
     {
-        parent::doStaff();
+        parent::doStuff();
         $this->meow();
     }
 

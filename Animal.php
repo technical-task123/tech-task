@@ -15,7 +15,7 @@ abstract class Animal
         $this->echo('eats %s', [$food]);
     }
 
-    public function doStaff(): void
+    public function doStuff(): void
     {
         $this->eat('food');
     }

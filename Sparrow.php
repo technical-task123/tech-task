@@ -1,7 +1,5 @@
 <?php
 
-require_once 'WalkingAnimal.php';
-
 class Sparrow extends WalkingAnimal
 {
     public function tweet(): void
@@ -14,9 +12,9 @@ class Sparrow extends WalkingAnimal
         $this->echo('flies');
     }
 
-    public function doStaff(): void
+    public function doStuff(): void
     {
-        parent::doStaff();
+        parent::doStuff();
         $this->tweet();
         $this->fly();
     }
