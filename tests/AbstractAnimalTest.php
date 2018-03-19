@@ -15,15 +15,15 @@ abstract class AbstractAnimalTest extends TestCase
         $stuff = \ob_get_clean();
 
         $this->assertEquals(
-            $this->stuffProvider(),
+            $this->getExpectedStuff(),
             \array_filter(\array_map('\\trim', \explode('<br>', $stuff)))
         );
     }
 
+    abstract protected function getSUT(): Animal;
+
     /**
      * @return string[]
      */
-    abstract public function stuffProvider(): array;
-
-    abstract protected function getSUT(): Animal;
+    abstract protected function getExpectedStuff(): array;
 }

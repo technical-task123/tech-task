@@ -2,10 +2,15 @@
 
 class SparrowTest extends AbstractAnimalTest
 {
+    protected function getSUT(): Animal
+    {
+        return new Sparrow('Test');
+    }
+
     /**
      * @return string[]
      */
-    public function stuffProvider(): array
+    protected function getExpectedStuff(): array
     {
         return [
             'Sparrow Test eats food',
@@ -13,10 +18,5 @@ class SparrowTest extends AbstractAnimalTest
             'Sparrow Test tweets',
             'Sparrow Test flies',
         ];
-    }
-
-    protected function getSUT(): Animal
-    {
-        return new Sparrow('Test');
     }
 }

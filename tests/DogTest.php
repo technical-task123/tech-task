@@ -2,10 +2,15 @@
 
 class DogTest extends AbstractAnimalTest
 {
+    protected function getSUT(): Animal
+    {
+        return new Dog('Test');
+    }
+
     /**
      * @return string[]
      */
-    public function stuffProvider(): array
+    protected function getExpectedStuff(): array
     {
         return [
             'Dog Test eats food',
@@ -14,10 +19,5 @@ class DogTest extends AbstractAnimalTest
             'Dog Test wufs',
             'Dog Test bites man',
         ];
-    }
-
-    protected function getSUT(): Animal
-    {
-        return new Dog('Test');
     }
 }

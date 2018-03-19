@@ -2,20 +2,20 @@
 
 class RatTest extends AbstractAnimalTest
 {
+    protected function getSUT(): Animal
+    {
+        return new Rat('Test');
+    }
+
     /**
      * @return string[]
      */
-    public function stuffProvider(): array
+    protected function getExpectedStuff(): array
     {
         return [
             'Rat Test eats food',
             'Rat Test runs',
             'Rat Test pies',
         ];
-    }
-
-    protected function getSUT(): Animal
-    {
-        return new Rat('Test');
     }
 }
