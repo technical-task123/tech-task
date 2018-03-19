@@ -1,5 +1,7 @@
 <?php
 
+namespace Animal;
+
 abstract class Animal
 {
     /** @var string */

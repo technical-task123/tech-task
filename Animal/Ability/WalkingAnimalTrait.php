@@ -1,5 +1,7 @@
 <?php
 
+namespace Animal\Ability;
+
 /**
  * @method void echo(string $text, string[] $args = null)
  */

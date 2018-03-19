@@ -1,8 +1,14 @@
 <?php
 
+use Animal\Animal;
+use Animal\Cat;
+use Animal\Dog;
+use Animal\Rat;
+use Animal\Sparrow;
+
 function __autoload($class_name)
 {
-    require_once $class_name . '.php';
+    require_once \str_replace('\\', '/', $class_name) . '.php';
 }
 
 foreach ([

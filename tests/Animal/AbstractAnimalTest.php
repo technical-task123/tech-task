@@ -1,7 +1,9 @@
 <?php
 
+namespace Animal;
+
 $classLoader = new \Composer\Autoload\ClassLoader();
-$classLoader->addPsr4('', __DIR__ . '/..', true);
+$classLoader->addPsr4('', __DIR__ . '/../..', true);
 $classLoader->register();
 
 use PHPUnit\Framework\TestCase;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Animal;
+
 class RatTest extends AbstractAnimalTest
 {
     protected function getSUT(): Animal

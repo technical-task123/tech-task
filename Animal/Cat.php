@@ -1,5 +1,9 @@
 <?php
 
+namespace Animal;
+
+use Animal\Ability\WalkingAnimalTrait;
+
 class Cat extends Animal
 {
     use WalkingAnimalTrait;

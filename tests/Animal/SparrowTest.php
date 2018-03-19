@@ -1,5 +1,7 @@
 <?php
 
+namespace Animal;
+
 class SparrowTest extends AbstractAnimalTest
 {
     protected function getSUT(): Animal

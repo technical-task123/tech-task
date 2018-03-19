@@ -1,5 +1,9 @@
 <?php
 
+namespace Animal;
+
+use Animal\Ability\RunningAnimalTrait;
+
 class Rat extends Animal
 {
     use RunningAnimalTrait;
