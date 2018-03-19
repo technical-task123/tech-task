@@ -9,6 +9,7 @@ class RatTest extends AbstractAnimalTest
     {
         return [
             'Rat Test eats food',
+            'Rat Test runs',
             'Rat Test pies',
         ];
     }

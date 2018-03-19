@@ -1,7 +1,9 @@
 <?php
 
-class Cat extends WalkingAnimal
+class Cat extends Animal
 {
+    use WalkingAnimalTrait;
+
     public function meow(): void
     {
         $this->echo('meows');
@@ -10,6 +12,7 @@ class Cat extends WalkingAnimal
     public function doStuff(): void
     {
         parent::doStuff();
+        $this->walk();
         $this->meow();
     }
 

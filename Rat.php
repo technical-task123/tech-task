@@ -2,6 +2,8 @@
 
 class Rat extends Animal
 {
+    use RunningAnimalTrait;
+
     public function pi(): void
     {
         $this->echo('pies');
@@ -10,6 +12,7 @@ class Rat extends Animal
     public function doStuff(): void
     {
         parent::doStuff();
+        $this->run();
         $this->pi();
     }
 

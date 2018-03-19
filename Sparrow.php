@@ -1,7 +1,9 @@
 <?php
 
-class Sparrow extends WalkingAnimal
+class Sparrow extends Animal
 {
+    use WalkingAnimalTrait;
+
     public function tweet(): void
     {
         $this->echo('tweets');
@@ -15,6 +17,7 @@ class Sparrow extends WalkingAnimal
     public function doStuff(): void
     {
         parent::doStuff();
+        $this->walk();
         $this->tweet();
         $this->fly();
     }

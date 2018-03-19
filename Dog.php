@@ -1,11 +1,9 @@
 <?php
 
-class Dog extends WalkingAnimal
+class Dog extends Animal
 {
-    public function run(): void
-    {
-        $this->echo('runs');
-    }
+    use WalkingAnimalTrait;
+    use RunningAnimalTrait;
 
     public function wuf(): void
     {
@@ -20,6 +18,7 @@ class Dog extends WalkingAnimal
     public function doStuff(): void
     {
         parent::doStuff();
+        $this->walk();
         $this->run();
         $this->wuf();
         $this->bite('man');
