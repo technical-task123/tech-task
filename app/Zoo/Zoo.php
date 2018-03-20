@@ -68,7 +68,7 @@ class Zoo
 
             $this->animals[] = $animal;
 
-            $this->animalsFreeArea -= $animal->getAnimalSize();
+            $this->animalsFreeArea -= $animal->getSize();
 
             $this->foodReserve->decreaseSize($animal->getFoodRation()->getSize());
 
@@ -79,23 +79,35 @@ class Zoo
     }
 
     /**
-     * Show animals details
+     * Get animals total area
+     *
+     * @return int
      */
-    public function showAnimalsList()
+    public function getAnimalsTotalSize()
     {
-        output('Animals list');
+        $result = 0;
 
-        foreach ($this->animals as $key => $animal) {
-            output(
-                sprintf(
-                    '%d. %s: size - %d, food ration - %d',
-                    $key + 1,
-                    $animal->getName(),
-                    $animal->getAnimalSize(),
-                    $animal->getFoodRation()->getSize()
-                )
-            );
+        foreach ($this->animals as $animal) {
+            $result += $animal->getSize();
         }
+
+        return $result;
+    }
+
+    /**
+     * Get animals total food ration
+     *
+     * @return int
+     */
+    public function getAnimalsTotalFoodRation()
+    {
+        $result = 0;
+
+        foreach ($this->animals as $animal) {
+            $result += $animal->getFoodRation();
+        }
+
+        return $result;
     }
 
     /**
@@ -107,7 +119,7 @@ class Zoo
      */
     private function validateFreeArea(Animal $animal)
     {
-        if ($animal->getAnimalSize() > $this->animalsFreeArea) {
+        if ($animal->getSize() > $this->animalsFreeArea) {
             throw new \Exception(
                 sprintf('Not enough area for %s animal', $animal->getName())
             );
