@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Zoo\Aviaries;
 
-
 use App\Zoo\Animals\FatPetCat;
 use App\Zoo\Animals\WildCat;
 use App\Zoo\Food;
