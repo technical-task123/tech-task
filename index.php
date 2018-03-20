@@ -18,6 +18,7 @@ $zoo = new Zoo(100, new Food(200));
 
 try {
     output('Animals statistics');
+    output('------------------');
 
     // Add different animals to zoo
     $zoo->addAnimal(
@@ -49,6 +50,7 @@ try {
     // Show animals list
     output();
     output('Animals list');
+    output('------------');
 
     foreach ($animals as $key => $animal) {
         output(
@@ -65,13 +67,17 @@ try {
     // Show header for animals activity
     output();
     output('Animals activity');
+    output('----------------');
 
     // Iterate over animals to show their activities
     foreach ($animals as $key => $animal) {
         // Basic activities
         $animal->eat(
             new Food(
-                ceil($animal->getFoodRation()->getSize() / 2)
+                rand(
+                    1,
+                    ceil($animal->getFoodRation()->getSize())
+                )
             )
         );
 
