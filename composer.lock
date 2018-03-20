@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4773f7ecf4f96436c9424b1abb238924",
+    "content-hash": "179aaf119a1f6952677401bf79dd2012",
     "packages": [],
     "packages-dev": [
         {
@@ -1474,6 +1474,61 @@
                 }
             },
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "aace22f9e11eacebbac3ccfd5bd2299071a4be3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.site.dukascopy.com:8081/artifactory/api/composer/php-remote/vcs-dists/zip/squizlabs/PHP_CodeSniffer/aace22f9e11eacebbac3ccfd5bd2299071a4be3e",
+                "reference": "aace22f9e11eacebbac3ccfd5bd2299071a4be3e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false
+                }
+            },
+            "time": "2018-03-20T04:09:28+00:00"
         },
         {
             "name": "theseer/tokenizer",
