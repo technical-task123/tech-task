@@ -132,10 +132,11 @@ abstract class Animal implements VitalActivity
 
         output(
             sprintf(
-                'Animal %s %s %d food',
+                'Animal %s %s %d food. %d food remains',
                 $this->name,
                 $this->activityStatus,
-                $foodSize
+                $foodSize,
+                $this->foodRation->getSize()
             )
         );
     }
