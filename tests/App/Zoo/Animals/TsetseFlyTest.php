@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\App\Zoo\Animals;
 
-
 use App\Zoo\Animal;
 use App\Zoo\Aviaries\FliesAviary;
 use App\Zoo\Food;

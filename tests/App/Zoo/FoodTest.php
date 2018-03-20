@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\App\Zoo;
 
-
 use App\Zoo\Food;
 use PHPUnit\Framework\TestCase;
 

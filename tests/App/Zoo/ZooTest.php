@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\App\Zoo;
 
-
 use App\Zoo\Aviaries\CatsAviary;
 use App\Zoo\Food;
 use App\Zoo\Zoo;
@@ -20,7 +19,7 @@ class ZooTest extends TestCase
 
     public function setUp()
     {
-       $this->zoo = new Zoo(100, new Food(200));
+        $this->zoo = new Zoo(100, new Food(200));
     }
 
     public function testZooCanBeCreated()

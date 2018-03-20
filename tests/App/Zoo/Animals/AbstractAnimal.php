@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\App\Zoo\Animals;
 
-
 use App\Zoo\Food;
 use App\Zoo\VitalActivity;
 use PHPUnit\Framework\TestCase;
@@ -44,7 +43,7 @@ abstract class AbstractAnimal extends TestCase
      *
      * @return Animal
      */
-    protected abstract function getVictimAnimal(): Animal;
+    abstract protected function getVictimAnimal(): Animal;
 
     public function setUp()
     {
