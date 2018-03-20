@@ -57,6 +57,7 @@ abstract class Animal implements VitalActivity
         $this->name = $name;
         $this->foodRation = $foodRation;
         $this->animalSize = $animalSize;
+        $this->activityStatus = self::STATUS_DO_NOTHING;
     }
 
     /**
@@ -106,7 +107,7 @@ abstract class Animal implements VitalActivity
      * @param bool   $showStatus
      * @return void
      */
-    protected function setActivityStatus(string $status, bool $showStatus = true): void
+    public function setActivityStatus(string $status, bool $showStatus = true): void
     {
         $this->activityStatus = $status;
 
@@ -163,7 +164,7 @@ abstract class Animal implements VitalActivity
     {
         $this->setActivityStatus(self::STATUS_ATTACK, false);
 
-        $animal->defend();
+        $animal->setActivityStatus(self::STATUS_DEFEND, false);
 
         output(
             sprintf(
