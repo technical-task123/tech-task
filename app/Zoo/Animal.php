@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Zoo;
 
@@ -128,7 +129,7 @@ abstract class Animal implements VitalActivity
 
         $this->foodRation->decreaseSize($foodSize);
 
-        $this->setActivityStatus(self::STATUS_EAT);
+        $this->setActivityStatus(self::STATUS_EAT, false);
 
         output(
             sprintf(
