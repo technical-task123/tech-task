@@ -73,7 +73,7 @@ abstract class Animal implements VitalActivity
      *
      * @return int
      */
-    public function getAnimalSize(): int
+    public function getSize(): int
     {
         return $this->animalSize;
     }
