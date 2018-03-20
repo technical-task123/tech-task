@@ -105,7 +105,7 @@ class Zoo
         $result = 0;
 
         foreach ($this->animals as $animal) {
-            $result += $animal->getFoodRation();
+            $result += $animal->getFoodRation()->getSize();
         }
 
         return $result;
@@ -122,7 +122,7 @@ class Zoo
     {
         if ($animal->getSize() > $this->animalsFreeArea) {
             throw new \Exception(
-                sprintf('Not enough area for %s animal', $animal->getName())
+                sprintf('Not enough area for %s animal!', $animal->getName())
             );
         }
     }
