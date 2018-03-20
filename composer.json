@@ -29,7 +29,7 @@
         }
     },
     "scripts": {
-        "phpunit": "phpunit",
+        "phpunit": "phpunit tests",
         "phpcs": "phpcs app/ tests/ --standard=psr2 -sp --colors",
         "test": [
             "@phpunit",
