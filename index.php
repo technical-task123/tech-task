@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 // Include composer autoload file
 require __DIR__ . '/vendor/autoload.php';
@@ -72,6 +73,8 @@ try {
     // Iterate over animals to show their activities
     foreach ($animals as $key => $animal) {
         // Basic activities
+        $animal->doNothing();
+
         $animal->eat(
             new Food(
                 rand(
