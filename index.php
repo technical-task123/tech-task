@@ -18,8 +18,8 @@ use App\Zoo\Zoo;
 $zoo = new Zoo(100, new Food(200));
 
 try {
-    output('Animals statistics');
-    output('------------------');
+    output('Animals list');
+    output('------------');
 
     // Add different animals to zoo
     $zoo->addAnimal(
@@ -41,17 +41,13 @@ try {
         FliesAviary::makeTsetseFly('Tsetse Fly 2', 2, new Food(2))
     );
 
-    // Total animal size and food ration
-    output('Animals total size: ' . $zoo->getAnimalsTotalSize());
-    output('Animals total food raion: ' . $zoo->getAnimalsTotalFoodRation());
-
     // Get animals
     $animals = $zoo->getAnimals();
 
     // Show animals list
     output();
-    output('Animals list');
-    output('------------');
+    output('Animals statistics');
+    output('------------------');
 
     foreach ($animals as $key => $animal) {
         output(
@@ -64,6 +60,10 @@ try {
             )
         );
     }
+
+    // Total animal size and food ration
+    output('Animals total size: ' . $zoo->getAnimalsTotalSize());
+    output('Animals total food raion: ' . $zoo->getAnimalsTotalFoodRation());
 
     // Show header for animals activity
     output();
@@ -79,7 +79,7 @@ try {
             new Food(
                 rand(
                     1,
-                    ceil($animal->getFoodRation()->getSize())
+                    (int)ceil($animal->getFoodRation()->getSize())
                 )
             )
         );
