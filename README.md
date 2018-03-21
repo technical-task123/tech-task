@@ -1,5 +1,25 @@
 # It Group PHP Developer Technical Task
 
+From Anatoliy Danchuk.
+Real tasks have a goal and vision for the future, as well as agreements that directly influence the development 
+result. If there is no - I ask, or independently understand, depending on the circumstances.
+
+I made the assumption that the task is to determine if there is minimal knowledge, how to explain my decisions 
+in the interview, and what bi has changed in approach if you enter your context into the task.
+
+I show:
+* classes, interfaces, property access 
+* magic method  
+* static variables
+* throw errors
+* DRY
+* comments, todo and warnings, markdown
+* psr code style by phpstorm
+* composer
+* **TODO**: docker
+* **TODO**: PHPUnit
+
+
 ## Overview
 
 Hello %username%. Here would be your start point in big company. This task is like a game and I hope it would
