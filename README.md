@@ -13,7 +13,7 @@ every animal has such ability. There are several issues and we hope you'd solve 
 * Look at our code, believe me, it's kinda shitty
 * Make this code as good as you can
   * Make as many commits as you want
-  * Show us you power
+  * Show us your power
 * Push into your repository
 * Create a Pull Request to our repository
 * Wait until our CI commit into your branch a new file with new instructions (in progress, hasn't been done yet)
