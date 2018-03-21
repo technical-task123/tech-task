@@ -1,58 +1,30 @@
 <?php
+declare(strict_types=1);
 
-class Animal
-{
-    public $name;
+require_once 'vendor/autoload.php';
 
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
+$animalTypes = [
+    'cat',
+    'dog',
+    'sparrow',
+    'rat',
+    'dragon'/*non-existent class*/];
+$animals = [];
 
-    public function walk()
-    {
-        if($this->name == 'dog' || $this->name == 'cat' || $this->name == 'rat')
-            echo $this->name . ' walking';
-    }
-
-    public function meow()
-    {
-        echo $this->name . ' meow';
-    }
-
-    public function run()
-    {
-        echo $this->name . ' run';
-    }
-
-    public function wuf()
-    {
-        echo $this->name . ' wuf';
-    }
-
-    public function byte($object)
-    {
-        echo $this->name . ' has bitten' . $object;
-    }
-
-    public function fly()
-    {
-        echo $this->name . ' fly';
-    }
-
-    public function pi()
-    {
-        echo $this->name . ' pi';
+foreach ($animalTypes as $type) {
+    try {
+        $animals[] = Zoo\AnimalFactory::getInstance($type);
+    } catch (\InvalidArgumentException $exception) {
+        echo $exception->getMessage() . '<br>';
     }
 }
 
-$animals = [
-    new Animal('cat'), new Animal('dog'), new Animal('sparrow'), new Animal('rat')
-];
+$expected = \Zoo\Cat::class;
+$actual = get_class(\Zoo\AnimalFactory::getInstance('Cat'));
 
-foreach($animals as $animal) {
-    switch($animal->name)
-    {
+foreach ($animals as $animal) {
+
+    switch (strtolower($animal->getName())) {
         case 'cat':
             $animal->walk();
             $animal->meow();
@@ -61,7 +33,7 @@ foreach($animals as $animal) {
             $animal->walk();
             $animal->run();
             $animal->wuf();
-            $animal->byte('man');
+            $animal->bite('man');
             break;
         case 'sparrow':
             $animal->walk();
