@@ -9,20 +9,21 @@ declare(strict_types=1);
 namespace Lib;
 
 
-class Zoo
+class Zoo implements LiveableInterface
 {
     protected $configuration;
 
 
-    public function __construct(ZooConfiguration $config)
+    public function __construct(AbstractZooConfiguration $config)
     {
         $this->configuration = $config;
     }
 
-    public function lifeCycle() {
+    public function live()
+    {
 
-        foreach($this->configuration->animalList as $animal) {
-            $animal->lifeCycle();
+        foreach ($this->configuration->getAnimalList() as $animal) {
+            $animal->live();
         }
     }
 

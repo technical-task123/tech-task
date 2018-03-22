@@ -6,16 +6,15 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:52
  */
 
-namespace Lib\Animal;
+namespace Lib\Implementation\Animal;
 
 
-use Lib\Ability\IPi;
-use Lib\Ability\IWalk;
+use Lib\Implementation\Animal;
+use Lib\Scheme\Ability\IPi;
+use Lib\Scheme\Ability\IWalk;
 
 final class Rat extends Animal implements IWalk, IPi
 {
-
-    protected $name = 'rat';
 
     public function lifeCycle() {
         $this->pi();

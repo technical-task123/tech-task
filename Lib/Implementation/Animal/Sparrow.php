@@ -6,13 +6,13 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:39
  */
 
-namespace Lib\Animal;
+namespace Lib\Implementation\Animal;
 
+
+use Lib\Implementation\Animal;
 
 final class Sparrow extends Animal
 {
-    protected $name = 'sparrow';
-
     public function fly()
     {
         echo $this->name . ' fly';

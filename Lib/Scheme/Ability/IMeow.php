@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-21 22:15
  */
 
-namespace Lib\Ability;
+namespace Lib\Scheme\Ability;
 
 
-interface IMeow
+interface IMeow extends IAbility
 {
 
 }

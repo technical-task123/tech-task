@@ -6,7 +6,9 @@ declare(strict_types=1);
  * Date: 2018-03-21 17:28
  */
 
-namespace Lib\Ability;
+namespace Lib\Scheme\Ability;
 
 
-interface IWalk {}
+interface IWalk extends IAbility
+{
+}
