@@ -9,15 +9,14 @@ declare(strict_types=1);
 namespace Lib\Scheme\Animal;
 
 
-use Lib\Implementation\LifeWay\AllAbility;
 use Lib\Scheme\Animal\Ability\HasAbilityInterface;
-use Lib\Scheme\LiveableInterface;
 
-abstract class AnimalAbstract implements IName, HasAbilityInterface, LiveableInterface
+
+abstract class AnimalConfigAbstract implements NameableInterface, HasAbilityInterface
 {
     protected $abilityList = [];
     protected $name;
-    protected $lifeWay = AllAbility::class;
+    protected $lifeWay;
 
     public function getName()
     {
@@ -29,8 +28,9 @@ abstract class AnimalAbstract implements IName, HasAbilityInterface, LiveableInt
         return $this->abilityList;
     }
 
-    public function live()
+    public function getLifeWay()
     {
-        return new $this->lifeWay($this);
+        return $this->lifeWay;
     }
+
 }

@@ -11,8 +11,9 @@ namespace Lib\Implementation\LifeWay;
 
 use Lib\Implementation\Animal\Ability\Beat;
 use Lib\Implementation\Animal\Ability\Eat;
-use Lib\Implementation\Animal\Man;
+use Lib\Implementation\Animal\Config\ManConfig;
 use Lib\Scheme\Animal\Ability\HasAbilityInterface;
+use Lib\Scheme\Animal\Man;
 
 class Dog
 {
@@ -20,7 +21,8 @@ class Dog
     {
         foreach ($object->getAbilityList() as $ability => $ability_detail_list) {
             if ($ability === Eat::class) {
-                new Beat(new Man(), $object);
+                $man = new Man(new ManConfig());
+                new Beat($man, $object);
             }
             new $ability($object, ...$ability_detail_list);
         }

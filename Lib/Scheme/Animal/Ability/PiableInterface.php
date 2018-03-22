@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace Lib\Scheme\Animal\Ability;
 
-
 interface PiableInterface extends AbilityInterface
 {
 

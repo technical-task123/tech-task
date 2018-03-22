@@ -15,11 +15,8 @@ class Beat extends Ability
 {
     public function __construct(BeatableInterface $object, $subject)
     {
+        $this->name = $this->getName() ?? 'has bitten';
         parent::__construct($subject, $object->getName());
     }
 
-    public function getName()
-    {
-        return 'has bitten';
-    }
 }

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Lib\Scheme\Animal;
 
 
-interface IName
+interface NameableInterface
 {
     public function getName();
 }

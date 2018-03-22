@@ -9,19 +9,21 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Animal\IName;
+use Lib\Scheme\Animal\Ability\AbstractAbility;
+use Lib\Scheme\Animal\NameableInterface;
 
-class Ability
+class Ability extends AbstractAbility
 {
-    public function __construct(IName $object, ...$ability_detail_list)
+    public function __construct(NameableInterface $object, ...$ability_detail_list)
     {
+        $this->name = $this->getName() ?? $this->generateName();
         array_unshift($ability_detail_list, $this->getName());
         echo $object->getName() . ' ' . implode(' ', $ability_detail_list) . PHP_EOL;
     }
 
-    protected function getName()
+    protected function generateName()
     {
-        $class_name = \get_called_class();
+        $class_name = static::class;
         // get main name of class without namespace.
         // Example: Dog from Lib\Implementation\Animal\Animal\Dog
         $class_name = \substr($class_name, \strrpos($class_name, '\\') + 1);

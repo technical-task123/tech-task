@@ -13,19 +13,9 @@ use Lib\Scheme\Animal\Ability\WalkableInterface;
 
 class Walk extends Ability
 {
-    /**
-     * Walk constructor.
-     *
-     * @param $object
-     * @param array $action_detail
-     */
     public function __construct(WalkableInterface $object)
     {
+        $this->name = $this->getName() ?? 'walking';
         parent::__construct($object);
-    }
-
-    public function getName()
-    {
-        return 'walking';
     }
 }

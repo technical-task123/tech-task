@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Lib\Scheme\Animal\Ability;
 
 
-use Lib\Scheme\Animal\IName;
+use Lib\Scheme\Animal\NameableInterface;
 
-interface AbilityInterface extends IName
+interface AbilityInterface extends NameableInterface
 {
 
 }

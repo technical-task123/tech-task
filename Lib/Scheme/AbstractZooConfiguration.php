@@ -12,7 +12,7 @@ namespace Lib\Scheme;
 abstract class AbstractZooConfiguration implements ZooConfigurationInterface
 {
     /**
-     * @var \Lib\Scheme\Animal\AnimalAbstract[]
+     * @var \Lib\Scheme\Animal\Animal[]
      */
     protected $animalList = [];
 
