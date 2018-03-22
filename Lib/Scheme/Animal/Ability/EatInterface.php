@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 01:28
  */
 
-namespace Lib\Scheme\Ability;
+namespace Lib\Scheme\Animal\Ability;
 
 
-interface IEat extends IAbility
+interface EatInterface extends AbilityInterface
 {
 
 }

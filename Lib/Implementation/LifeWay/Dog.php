@@ -9,10 +9,10 @@ declare(strict_types=1);
 namespace Lib\Implementation\LifeWay;
 
 
-use Lib\Implementation\Ability\Beat;
-use Lib\Implementation\Ability\Eat;
+use Lib\Implementation\Animal\Ability\Beat;
+use Lib\Implementation\Animal\Ability\Eat;
 use Lib\Implementation\Animal\Man;
-use Lib\Scheme\Ability\HasAbilityInterface;
+use Lib\Scheme\Animal\Ability\HasAbilityInterface;
 
 class Dog
 {

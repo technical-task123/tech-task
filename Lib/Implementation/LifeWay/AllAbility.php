@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Lib\Implementation\LifeWay;
 
-use Lib\Scheme\Ability\HasAbilityInterface;
+use Lib\Scheme\Animal\Ability\HasAbilityInterface;
 
 class AllAbility
 {

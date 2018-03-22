@@ -9,16 +9,8 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal;
 
 
-use Lib\Implementation\Animal;
-
 final class Sparrow extends Animal
 {
-    public function fly()
-    {
-        echo $this->name . ' fly';
-    }
-
-
     public function lifeCycle()
     {
         $this->walk();
@@ -26,6 +18,11 @@ final class Sparrow extends Animal
         $this->fly();
 
         parent::lifeCycle();
+    }
+
+    public function fly()
+    {
+        echo $this->name . ' fly';
     }
 
 }

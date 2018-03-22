@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 12:06
  */
 
-namespace Lib\Scheme\Ability;
+namespace Lib\Scheme\Animal\Ability;
 
 
-interface BeatableInterface extends IAbility
+interface BeatableInterface extends AbilityInterface
 {
 
 }

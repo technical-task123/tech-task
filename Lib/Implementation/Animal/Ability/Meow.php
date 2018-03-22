@@ -6,14 +6,14 @@ declare(strict_types=1);
  * Date: 2018-03-21 23:11
  */
 
-namespace Lib\Implementation\Ability;
+namespace Lib\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Ability\IMeow;
+use Lib\Scheme\Animal\Ability\MeowableInterface;
 
 class Meow extends Ability
 {
-    public function __construct(IMeow $object)
+    public function __construct(MeowableInterface $object)
     {
         parent::__construct($object);
     }

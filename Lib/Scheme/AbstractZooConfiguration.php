@@ -6,10 +6,8 @@ declare(strict_types=1);
  * Date: 2018-03-21 20:51
  */
 
-namespace Lib;
+namespace Lib\Scheme;
 
-
-use Lib\Scheme\Animal\AnimalAbstract;
 
 abstract class AbstractZooConfiguration implements ZooConfigurationInterface
 {

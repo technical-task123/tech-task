@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal;
 
 
-use Lib\Implementation\Animal;
-use Lib\Scheme\Ability\IPi;
-use Lib\Scheme\Ability\IWalk;
+use Lib\Scheme\Animal\Ability\PiableInterface;
+use Lib\Scheme\Animal\Ability\WalkableInterface;
 
-final class Rat extends Animal implements IWalk, IPi
+final class Rat extends Animal implements WalkableInterface, PiableInterface
 {
 
-    public function lifeCycle() {
+    public function lifeCycle()
+    {
         $this->pi();
 
         parent::lifeCycle();

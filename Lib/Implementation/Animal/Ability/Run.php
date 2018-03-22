@@ -6,15 +6,15 @@ declare(strict_types=1);
  * Date: 2018-03-21 23:21
  */
 
-namespace Lib\Implementation\Ability;
+namespace Lib\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Ability\IRun;
+use Lib\Scheme\Animal\Ability\RunableInterface;
 
 
 class Run extends Ability
 {
-    public function __construct(IRun $object)
+    public function __construct(RunableInterface $object)
     {
         parent::__construct($object);
     }

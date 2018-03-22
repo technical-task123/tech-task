@@ -9,8 +9,7 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal;
 
 
-use Lib\Implementation\Animal;
-use Lib\Scheme\Ability\BeatableInterface;
+use Lib\Scheme\Animal\Ability\BeatableInterface;
 
 class Man extends Animal implements BeatableInterface
 {

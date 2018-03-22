@@ -6,9 +6,9 @@ declare(strict_types=1);
  * Date: 2018-03-21 17:28
  */
 
-namespace Lib\Scheme\Ability;
+namespace Lib\Scheme\Animal\Ability;
 
 
-interface IWalk extends IAbility
+interface WalkableInterface extends AbilityInterface
 {
 }

@@ -6,13 +6,13 @@ declare(strict_types=1);
  * Date: 2018-03-21 23:22
  */
 
-namespace Lib\Implementation\Ability;
+namespace Lib\Implementation\Animal\Ability;
 
-use Lib\Scheme\Ability\IWuf;
+use Lib\Scheme\Animal\Ability\WufableInterface;
 
 class Wuf extends Ability
 {
-    public function __construct(IWuf $object)
+    public function __construct(WufableInterface $object)
     {
         parent::__construct($object);
     }

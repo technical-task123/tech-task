@@ -9,13 +9,12 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal;
 
 
-use Lib\Implementation\Ability\Meow;
-use Lib\Implementation\Ability\Walk;
-use Lib\Implementation\Animal;
-use Lib\Scheme\Ability\IMeow;
-use Lib\Scheme\Ability\IWalk;
+use Lib\Implementation\Animal\Ability\Meow;
+use Lib\Implementation\Animal\Ability\Walk;
+use Lib\Scheme\Animal\Ability\MeowableInterface;
+use Lib\Scheme\Animal\Ability\WalkableInterface;
 
-final class Cat extends Animal implements IWalk, IMeow
+final class Cat extends Animal implements WalkableInterface, MeowableInterface
 {
     public $name = 'cat';
 

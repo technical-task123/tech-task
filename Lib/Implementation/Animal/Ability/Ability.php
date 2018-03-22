@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Date: 2018-03-21 22:51
  */
 
-namespace Lib\Implementation\Ability;
+namespace Lib\Implementation\Animal\Ability;
 
 
 use Lib\Scheme\Animal\IName;
@@ -23,7 +23,7 @@ class Ability
     {
         $class_name = \get_called_class();
         // get main name of class without namespace.
-        // Example: Dog from Lib\Implementation\Animal\Dog
+        // Example: Dog from Lib\Implementation\Animal\Animal\Dog
         $class_name = \substr($class_name, \strrpos($class_name, '\\') + 1);
 
         return \lcfirst($class_name);

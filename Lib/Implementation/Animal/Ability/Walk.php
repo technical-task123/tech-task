@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-21 22:36
  */
 
-namespace Lib\Implementation\Ability;
+namespace Lib\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Ability\IWalk;
+use Lib\Scheme\Animal\Ability\WalkableInterface;
 
 class Walk extends Ability
 {
@@ -19,7 +19,7 @@ class Walk extends Ability
      * @param $object
      * @param array $action_detail
      */
-    public function __construct(IWalk $object)
+    public function __construct(WalkableInterface $object)
     {
         parent::__construct($object);
     }

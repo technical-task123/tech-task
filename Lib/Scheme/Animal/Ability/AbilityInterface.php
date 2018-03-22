@@ -6,12 +6,12 @@ declare(strict_types=1);
  * Date: 2018-03-22 01:22
  */
 
-namespace Lib\Scheme\Ability;
+namespace Lib\Scheme\Animal\Ability;
 
 
 use Lib\Scheme\Animal\IName;
 
-interface IAbility extends IName
+interface AbilityInterface extends IName
 {
 
 }

@@ -6,13 +6,12 @@ declare(strict_types=1);
  * Date: 2018-03-21 20:04
  */
 
-namespace Lib;
+namespace Lib\Scheme;
 
 
 class Zoo implements LiveableInterface
 {
     protected $configuration;
-
 
     public function __construct(AbstractZooConfiguration $config)
     {
@@ -21,7 +20,6 @@ class Zoo implements LiveableInterface
 
     public function live()
     {
-
         foreach ($this->configuration->getAnimalList() as $animal) {
             $animal->live();
         }

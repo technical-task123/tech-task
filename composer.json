@@ -1,12 +1,10 @@
 {
-
   "autoload": {
     "psr-4": {
       "Data\\": "Data/",
       "Lib\\": "Lib/"
     }
   },
-
   "require": {
     "php": ">7"
   }

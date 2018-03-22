@@ -9,16 +9,15 @@ declare(strict_types=1);
 namespace Lib\Implementation\Animal;
 
 
-use Lib\Implementation\Ability\Run;
-use Lib\Implementation\Ability\Walk;
-use Lib\Implementation\Ability\Wuf;
-use Lib\Implementation\Animal;
-use Lib\Scheme\Ability\BeatableInterface;
-use Lib\Scheme\Ability\IRun;
-use Lib\Scheme\Ability\IWalk;
-use Lib\Scheme\Ability\IWuf;
+use Lib\Implementation\Animal\Ability\Run;
+use Lib\Implementation\Animal\Ability\Walk;
+use Lib\Implementation\Animal\Ability\Wuf;
+use Lib\Scheme\Animal\Ability\BeatableInterface;
+use Lib\Scheme\Animal\Ability\RunableInterface;
+use Lib\Scheme\Animal\Ability\WalkableInterface;
+use Lib\Scheme\Animal\Ability\WufableInterface;
 
-final class Dog extends Animal implements IWalk, IRun, IWuf, BeatableInterface
+final class Dog extends Animal implements WalkableInterface, RunableInterface, WufableInterface, BeatableInterface
 {
     protected $lifeWay = \Lib\Implementation\LifeWay\Dog::class;
 

@@ -9,11 +9,11 @@ declare(strict_types=1);
 namespace Lib\Implementation;
 
 
-use Lib\AbstractZooConfiguration;
 use Lib\Implementation\Animal\Cat;
 use Lib\Implementation\Animal\Dog;
 use Lib\Implementation\Animal\Rat;
 use Lib\Implementation\Animal\Sparrow;
+use Lib\Scheme\AbstractZooConfiguration;
 
 class ZooConfiguration extends AbstractZooConfiguration
 {

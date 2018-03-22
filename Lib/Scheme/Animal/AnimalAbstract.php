@@ -10,12 +10,12 @@ namespace Lib\Scheme\Animal;
 
 
 use Lib\Implementation\LifeWay\AllAbility;
-use Lib\LiveableInterface;
-use Lib\Scheme\Ability\HasAbilityInterface;
+use Lib\Scheme\Animal\Ability\HasAbilityInterface;
+use Lib\Scheme\LiveableInterface;
 
 abstract class AnimalAbstract implements IName, HasAbilityInterface, LiveableInterface
 {
-    public $abilityList = [];
+    protected $abilityList = [];
     protected $name;
     protected $lifeWay = AllAbility::class;
 
