@@ -9,14 +9,15 @@ every animal has such ability. There are several issues and we hope you'd solve 
    
 ## Instructions
 
-* Create a branch named by your name.surname
+* Fork this repository
 * Look at our code, believe me, it's kinda shitty
 * Make this code as good as you can
   * Make as many commits as you want
-  * Show us you power
-* Push into a repository
-* Create a Pull Request
-* Wait until our CI commit into your branch a new file with new instructions (in progress, hasn't been done yet)
+  * Show us your power
+* Push into your repository
+* Create a Pull Request to our repository
+* Ping us to check
+* ~Wait until our CI commit into your branch a new file with new instructions (in progress, hasn't been done yet)~
 
 ## Nice to have in result code
 
