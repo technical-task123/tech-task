@@ -6,12 +6,9 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-24 00:24
  */
-class Zoo
+class Zoo implements IhasAnimalCollection
 {
-    /**
-     * @var array
-     */
-    public $animalCollection;
+    use ThasAnimalCollection;
 
     public $lifeCycle = ZooLifeCycle::class;
 }

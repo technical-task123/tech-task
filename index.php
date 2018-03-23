@@ -14,18 +14,18 @@ require_once __DIR__ . '/autoload.php';
 
 $f = new Lib();
 
-$animalCollection = $f->initAmadeusZooAnimalCollection();
+$animal_collection = $f->initAmadeusZooAnimalCollection();
 $zoo = $f->createObject(Zoo::class);
-$f->setZooAnimalCollection($zoo, $animalCollection);
+$f->setAnimalCollection($zoo, $animal_collection);
 $f->live($zoo);
 
-foreach ($animalCollection as $animal) {
-
+//foreach ($animal_collection as $animal) {
+//
 //    switch($animal->name)
 //    {
 //        case 'dog':
 //            $animal->byte('man');
 //            break;
 //    }
-
-}
+//
+//}

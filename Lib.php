@@ -92,7 +92,7 @@ class Lib
         $object->name = $name;
     }
 
-    public function setZooAnimalCollection(Zoo $object, $collection)
+    public function setAnimalCollection(IhasAnimalCollection $object, $collection)
     {
         $object->animalCollection = $collection;
     }
