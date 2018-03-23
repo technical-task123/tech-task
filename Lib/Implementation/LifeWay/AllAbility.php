@@ -6,9 +6,9 @@ declare(strict_types=1);
  * Date: 2018-03-22 02:04
  */
 
-namespace Lib\Implementation\LifeWay;
+namespace DanchukAS\Implementation\LifeWay;
 
-use Lib\Scheme\Animal\Ability\HasAbilityInterface;
+use DanchukAS\Scheme\Animal\Ability\HasAbilityInterface;
 
 class AllAbility
 {

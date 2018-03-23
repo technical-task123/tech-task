@@ -6,12 +6,12 @@ declare(strict_types=1);
  * Date: 2018-03-22 16:27
  */
 
-namespace Lib\Scheme\Animal;
+namespace DanchukAS\Scheme\Animal;
 
 
-use Lib\Scheme\Animal\Ability\EatInterface;
-use Lib\Scheme\Animal\Ability\HasAbilityInterface;
-use Lib\Scheme\LiveableInterface;
+use DanchukAS\Scheme\Animal\Ability\EatInterface;
+use DanchukAS\Scheme\Animal\Ability\HasAbilityInterface;
+use DanchukAS\Scheme\LiveableInterface;
 
 class Animal implements LiveableInterface, NameableInterface, HasAbilityInterface, EatInterface
 {

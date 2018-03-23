@@ -6,14 +6,14 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:34
  */
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
 
-use Lib\Implementation\Animal\Ability\Run;
-use Lib\Implementation\Animal\Ability\Walk;
-use Lib\Implementation\Animal\Ability\Wuf;
-use Lib\Implementation\Animal\Config;
-use Lib\Implementation\LifeWay\Dog;
+use DanchukAS\Implementation\Animal\Ability\Run;
+use DanchukAS\Implementation\Animal\Ability\Walk;
+use DanchukAS\Implementation\Animal\Ability\Wuf;
+use DanchukAS\Implementation\Animal\Config;
+use DanchukAS\Implementation\LifeWay\Dog;
 
 final class DogConfig extends Config\AnimalConfig
 {

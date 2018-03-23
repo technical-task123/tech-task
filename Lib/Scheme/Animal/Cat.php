@@ -6,11 +6,11 @@ declare(strict_types=1);
  * Date: 2018-03-22 16:46
  */
 
-namespace Lib\Scheme\Animal;
+namespace DanchukAS\Scheme\Animal;
 
 
-use Lib\Scheme\Animal\Ability\MeowableInterface;
-use Lib\Scheme\Animal\Ability\WalkableInterface;
+use DanchukAS\Scheme\Animal\Ability\MeowableInterface;
+use DanchukAS\Scheme\Animal\Ability\WalkableInterface;
 
 class Cat extends Animal implements WalkableInterface, MeowableInterface
 {

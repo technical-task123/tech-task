@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 01:22
  */
 
-namespace Lib\Scheme\Animal\Ability;
+namespace DanchukAS\Scheme\Animal\Ability;
 
 
-use Lib\Scheme\Animal\NameableInterface;
+use DanchukAS\Scheme\Animal\NameableInterface;
 
 interface AbilityInterface extends NameableInterface
 {

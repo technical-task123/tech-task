@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Date: 2018-03-22 00:50
  */
 
-namespace Lib\Scheme\Animal;
+namespace DanchukAS\Scheme\Animal;
 
 
 interface NameableInterface

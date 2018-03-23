@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 16:07
  */
 
-namespace Lib\Implementation\Animal\Ability;
+namespace DanchukAS\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Animal\Ability\PiableInterface;
+use DanchukAS\Scheme\Animal\Ability\PiableInterface;
 
 class Pi extends Ability
 {

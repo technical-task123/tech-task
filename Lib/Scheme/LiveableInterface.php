@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Date: 2018-03-22 12:56
  */
 
-namespace Lib\Scheme;
+namespace DanchukAS\Scheme;
 
 
 interface LiveableInterface

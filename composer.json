@@ -1,10 +1,23 @@
 {
+  "homepage": "https://github.com/danchukas/tech-task",
+  "name": "danchukas/tech-task123",
+  "description": "task from Amadeus",
   "autoload": {
     "psr-4": {
-      "Lib\\": "Lib/"
+      "DanchukAS\\": "Lib/"
     }
   },
   "require": {
-    "php": ">7"
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload-dev": {
+    "psr-4": {
+      "DanchukAS\\Test\\": "test/"
+    }
   }
 }

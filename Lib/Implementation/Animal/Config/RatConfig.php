@@ -6,11 +6,11 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:52
  */
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
 
-use Lib\Implementation\Animal\Ability\Pi;
-use Lib\Implementation\Animal\Config;
+use DanchukAS\Implementation\Animal\Ability\Pi;
+use DanchukAS\Implementation\Animal\Config;
 
 class RatConfig extends Config\AnimalConfig
 {

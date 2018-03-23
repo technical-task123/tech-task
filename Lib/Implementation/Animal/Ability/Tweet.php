@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 17:31
  */
 
-namespace Lib\Implementation\Animal\Ability;
+namespace DanchukAS\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Animal\Ability\TweetableInterface;
+use DanchukAS\Scheme\Animal\Ability\TweetableInterface;
 
 class Tweet extends Ability
 {

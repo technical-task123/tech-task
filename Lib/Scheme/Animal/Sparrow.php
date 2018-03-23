@@ -6,12 +6,12 @@ declare(strict_types=1);
  * Date: 2018-03-22 17:26
  */
 
-namespace Lib\Scheme\Animal;
+namespace DanchukAS\Scheme\Animal;
 
 
-use Lib\Scheme\Animal\Ability\FlyableInterface;
-use Lib\Scheme\Animal\Ability\TweetableInterface;
-use Lib\Scheme\Animal\Ability\WalkableInterface;
+use DanchukAS\Scheme\Animal\Ability\FlyableInterface;
+use DanchukAS\Scheme\Animal\Ability\TweetableInterface;
+use DanchukAS\Scheme\Animal\Ability\WalkableInterface;
 
 class Sparrow extends Animal implements WalkableInterface, FlyableInterface, TweetableInterface
 {

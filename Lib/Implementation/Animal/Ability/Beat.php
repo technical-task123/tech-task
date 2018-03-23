@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 12:09
  */
 
-namespace Lib\Implementation\Animal\Ability;
+namespace DanchukAS\Implementation\Animal\Ability;
 
 
-use Lib\Scheme\Animal\Ability\BeatableInterface;
+use DanchukAS\Scheme\Animal\Ability\BeatableInterface;
 
 class Beat extends Ability
 {

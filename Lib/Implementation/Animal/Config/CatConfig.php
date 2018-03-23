@@ -6,11 +6,11 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:29
  */
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
 
-use Lib\Implementation\Animal\Ability\Meow;
-use Lib\Implementation\Animal\Ability\Walk;
+use DanchukAS\Implementation\Animal\Ability\Meow;
+use DanchukAS\Implementation\Animal\Ability\Walk;
 
 final class CatConfig extends AnimalConfig
 {

@@ -6,14 +6,14 @@ declare(strict_types=1);
  * Date: 2018-03-22 12:24
  */
 
-namespace Lib\Implementation\LifeWay;
+namespace DanchukAS\Implementation\LifeWay;
 
 
-use Lib\Implementation\Animal\Ability\Beat;
-use Lib\Implementation\Animal\Ability\Eat;
-use Lib\Implementation\Animal\Config\ManConfig;
-use Lib\Scheme\Animal\Ability\HasAbilityInterface;
-use Lib\Scheme\Animal\Man;
+use DanchukAS\Implementation\Animal\Ability\Beat;
+use DanchukAS\Implementation\Animal\Ability\Eat;
+use DanchukAS\Implementation\Animal\Config\ManConfig;
+use DanchukAS\Scheme\Animal\Ability\HasAbilityInterface;
+use DanchukAS\Scheme\Animal\Man;
 
 class Dog
 {

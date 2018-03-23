@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-21 20:04
  */
 
-namespace Lib\Implementation;
+namespace DanchukAS\Implementation;
 
 
-use Lib\Scheme\AbstractZoo;
+use DanchukAS\Scheme\AbstractZoo;
 
 class Zoo extends AbstractZoo
 {

@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
-use Lib\Implementation\Animal\Ability\Eat;
-use Lib\Implementation\LifeWay\AllAbility;
-use Lib\Scheme\Animal\Ability\EatInterface;
-use Lib\Scheme\Animal\AnimalConfigAbstract;
+use DanchukAS\Implementation\Animal\Ability\Eat;
+use DanchukAS\Implementation\LifeWay\AllAbility;
+use DanchukAS\Scheme\Animal\Ability\EatInterface;
+use DanchukAS\Scheme\Animal\AnimalConfigAbstract;
 
 
 /**
@@ -39,7 +39,7 @@ class AnimalConfig extends AnimalConfigAbstract implements EatInterface
 
         $name = static::class;
         // get main name of class without namespace.
-        // Example: WalkConfig from Lib\Implementation\Animal\Ability\WalkConfig
+        // Example: WalkConfig from DanchukAS\Implementation\Animal\Ability\WalkConfig
         $name = \substr($name, \strrpos($name, '\\') + 1);
         // cut suffix Config. Example: Walk from WalkConfig
         $name = \str_replace('Config', '', $name);

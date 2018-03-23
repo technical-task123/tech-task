@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 10:39
  */
 
-namespace Lib\Scheme\Animal;
+namespace DanchukAS\Scheme\Animal;
 
 
-use Lib\Scheme\Animal\Ability\HasAbilityInterface;
+use DanchukAS\Scheme\Animal\Ability\HasAbilityInterface;
 
 
 abstract class AnimalConfigAbstract implements NameableInterface, HasAbilityInterface

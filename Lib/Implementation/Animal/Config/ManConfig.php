@@ -6,10 +6,10 @@ declare(strict_types=1);
  * Date: 2018-03-22 12:20
  */
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
 
-use Lib\Implementation\Animal\Config;
+use DanchukAS\Implementation\Animal\Config;
 
 
 class ManConfig extends Config\AnimalConfig

@@ -6,13 +6,13 @@ declare(strict_types=1);
  * Date: 2018-03-21 16:39
  */
 
-namespace Lib\Implementation\Animal\Config;
+namespace DanchukAS\Implementation\Animal\Config;
 
 
-use Lib\Implementation\Animal\Ability\Fly;
-use Lib\Implementation\Animal\Ability\Tweet;
-use Lib\Implementation\Animal\Ability\Walk;
-use Lib\Implementation\Animal\Config;
+use DanchukAS\Implementation\Animal\Ability\Fly;
+use DanchukAS\Implementation\Animal\Ability\Tweet;
+use DanchukAS\Implementation\Animal\Ability\Walk;
+use DanchukAS\Implementation\Animal\Config;
 
 final class SparrowConfig extends Config\AnimalConfig
 {

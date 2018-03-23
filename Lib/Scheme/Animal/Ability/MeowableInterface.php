@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Date: 2018-03-21 22:15
  */
 
-namespace Lib\Scheme\Animal\Ability;
+namespace DanchukAS\Scheme\Animal\Ability;
 
 
 interface MeowableInterface extends AbilityInterface

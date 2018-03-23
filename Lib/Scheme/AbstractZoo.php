@@ -6,14 +6,14 @@ declare(strict_types=1);
  * Date: 2018-03-21 20:04
  */
 
-namespace Lib\Scheme;
+namespace DanchukAS\Scheme;
 
 
 abstract class AbstractZoo implements LiveableInterface
 {
     protected $configuration;
 
-    public function __construct(AbstractZooConfiguration $config)
+    public function __construct(ZooConfiguration $config)
     {
         $this->configuration = $config;
     }
