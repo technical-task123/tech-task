@@ -26,6 +26,10 @@ every animal has such ability. There are several issues and we hope you'd solve 
 
 ## How to run new code
 
-* composer update
-* composer test
-* php index.php
+* docker-compose up --build -d
+* docker exec -ti tech-task composer test && php index.php
+
+*You might need to change proxy settings in Dockerfile*
+> ENV http_proxy http://10.0.2.2:3128
+
+> ENV https_proxy http://10.0.2.2:3128
