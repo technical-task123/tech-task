@@ -24,3 +24,13 @@ every animal has such ability. There are several issues and we hope you'd solve 
 * php 7
 * Unit tests
 * docker environment
+
+## How to run new code
+
+* docker-compose up --build -d
+* docker exec -ti tech-task composer update && composer test && php index.php
+
+*You might need to change proxy settings in Dockerfile*
+> ENV http_proxy http://10.0.2.2:3128
+
+> ENV https_proxy http://10.0.2.2:3128

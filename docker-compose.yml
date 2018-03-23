@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+
+  php-7.2:
+      build: .
+      container_name: tech-task
+      working_dir: /usr/src/tech-task
+      tty: true
+      environment:
+        - HTTP_PROXY=$HTTP_PROXY
+        - HTTPS_PROXY=$HTTPS_PROXY
+        - NO_PROXY=$NO_PROXY
+      volumes:
+        - .:/usr/src/tech-task
+      expose:
+        - "9000"
+        - "9111"
