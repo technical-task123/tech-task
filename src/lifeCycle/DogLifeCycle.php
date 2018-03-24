@@ -10,9 +10,9 @@ class DogLifeCycle extends EatLifeCycle
 {
     public static function run(Lib $f, $object)
     {
-        $f->action($object, 'walk');
-        $f->action($object, 'run');
-        $f->action($object, 'wuf');
+        $f->callAction($object, 'walk');
+        $f->callAction($object, 'run');
+        $f->callAction($object, 'wuf');
 
         parent::run($f, $object);
     }

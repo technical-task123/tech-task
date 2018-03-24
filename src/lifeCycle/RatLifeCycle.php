@@ -6,13 +6,11 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-23 20:53
  */
-class SparrowLifeCycle extends EatLifeCycle
+class RatLifeCycle extends EatLifeCycle
 {
     public static function run(Lib $f, $object)
     {
-        $f->action($object, 'walk');
-        $f->action($object, 'tweet');
-        $f->action($object, 'fly');
+        $f->callAction($object, 'pi');
 
         parent::run($f, $object);
     }

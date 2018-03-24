@@ -6,7 +6,7 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-24 00:45
  */
-interface IhasAnimalCollection
+interface IHasAnimalCollection
 {
 
 }

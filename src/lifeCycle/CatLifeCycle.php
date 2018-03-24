@@ -10,8 +10,8 @@ class CatLifeCycle extends EatLifeCycle
 {
     public static function run(Lib $f, $object)
     {
-        $f->action($object, 'walk');
-        $f->action($object, 'meow');
+        $f->callAction($object, 'walk');
+        $f->callAction($object, 'meow');
 
         parent::run($f, $object);
     }

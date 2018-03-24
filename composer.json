@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "name": "Danchuk Anatoliy",
+      "email": "volk160590@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  }
+}

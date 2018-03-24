@@ -4,9 +4,9 @@ declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: danchukas
- * Date: 2018-03-23 20:17
+ * Date: 2018-03-23 20:59
  */
-interface IWalkable
+interface IRunnable
 {
-
+    public function run();
 }

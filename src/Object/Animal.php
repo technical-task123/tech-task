@@ -11,8 +11,4 @@ class Animal
     public $name;
     public $lifeCycle = EatLifeCycle::class;
 
-    public function walk(Lib $f)
-    {
-        $f->walk($this);
-    }
 }
