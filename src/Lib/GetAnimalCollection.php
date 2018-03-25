@@ -7,7 +7,7 @@ namespace DanchukAS\AmadeusTechTask123\Lib;
 class GetAnimalCollection extends \LibFunction
 {
 
-    public function run(\IHasAnimalCollection $object)
+    public function run(\IHasAnimalCollection $object): array
     {
         return $object->animalCollection;
     }

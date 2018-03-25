@@ -45,14 +45,3 @@ ob_end_flush();
 // @todo documentation for ILibGenerator.php, LibFunction
 // @todo say Olga by skype
 
-//foreach ($animal_collection as $animal) {
-//
-//    switch($animal->name)
-//    {
-//        case 'dog':
-// @todo man beat dog
-//            $animal->byte('man');
-//            break;
-//    }
-//
-//}
