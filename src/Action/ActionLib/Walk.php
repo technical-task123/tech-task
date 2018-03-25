@@ -9,14 +9,16 @@ declare(strict_types=1);
 
 namespace DanchukAS\AmadeusTechTask123\Action;
 
-class Walk implements \IRunnable
+use DanchukAS\AmadeusTechTask123\Action;
+
+class Walk extends Action
 {
     use \TNeedVerifyAvailable, \TAvailableWalk;
 
-    public function run()
+    public function run($run_param)
     {
-        [$f, [, $object]] = \func_get_args();
+        [, $object] = $run_param;
 
-        $f->callAction($object, 'walking');
+        $this->lib->callAction($object, 'walking');
     }
 }

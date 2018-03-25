@@ -8,5 +8,9 @@ declare(strict_types=1);
  */
 class LibFunction
 {
+    /**
+     * @var \ILib
+     */
     public $lib;
+
 }

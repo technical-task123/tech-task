@@ -11,6 +11,6 @@ class EatLifeCycle
 
     public static function run(Lib $f, $object)
     {
-        $f->callAction($object, 'eat', 'food');
+        $f->callAction($object, 'eat', ['food']);
     }
 }

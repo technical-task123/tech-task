@@ -8,5 +8,5 @@ declare(strict_types=1);
  */
 interface IRunnable
 {
-    public function run();
+    public function run($run_param);
 }

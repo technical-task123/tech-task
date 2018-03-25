@@ -23,10 +23,13 @@ ob_start();
 
 $lib->live($zoo);
 
+sleep(1);
 ob_end_flush();
 
-// @todo generate Lib notation for clickable method
+
+
 // @todo setFunctionalityLib  ... create functionalityObject extends Functionality Object
+// @todo composer auto update
 // @todo namespace DanchukAS/tech-task-123 but what about conflict and easy replace ?
 // @todo composer.json max
 // @todo composer  "provide": {"DanchukAS/Zoo": "1.0.*"}
@@ -39,6 +42,7 @@ ob_end_flush();
 // @todo add my explains to readme
 // @todo push 2 variant
 // @todo pullRequest to Amadeus
+// @todo documentation for ILibGenerator.php, LibFunction
 // @todo say Olga by skype
 
 //foreach ($animal_collection as $animal) {
