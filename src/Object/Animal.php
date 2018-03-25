@@ -6,9 +6,8 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-23 19:09
  */
-class Animal
+class Animal extends AAnimal
 {
-    public $name;
     public $lifeCycle = EatLifeCycle::class;
 
 }

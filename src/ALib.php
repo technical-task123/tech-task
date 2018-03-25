@@ -16,7 +16,7 @@ abstract class ALib
 
     protected function getClassName($methodName)
     {
-        return '\LibFunction\\' . ucfirst($methodName);
+        return '\\DanchukAS\\AmadeusTechTask123\\Lib\\' . ucfirst($methodName);
     }
 
 

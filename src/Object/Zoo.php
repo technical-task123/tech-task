@@ -6,9 +6,7 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-24 00:24
  */
-class Zoo implements \IHasAnimalCollection
+class Zoo extends AZoo
 {
-    use \THasAnimalCollection;
-
     public $lifeCycle = \ZooLifeCycle::class;
 }

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LibFunction;
+namespace DanchukAS\AmadeusTechTask123\Lib;
 
 
 class SetLib extends \LibFunction

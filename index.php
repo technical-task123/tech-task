@@ -26,8 +26,8 @@ $lib->live($zoo);
 sleep(1);
 ob_end_flush();
 
-
-
+// @todo Lifecycle to lifecycleLib
+// @todo Action to Action Object, and ActionLib
 // @todo setFunctionalityLib  ... create functionalityObject extends Functionality Object
 // @todo composer auto update
 // @todo namespace DanchukAS/tech-task-123 but what about conflict and easy replace ?
