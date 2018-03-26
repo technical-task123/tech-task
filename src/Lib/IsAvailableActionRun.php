@@ -7,14 +7,13 @@ namespace DanchukAS\AmadeusTechTask123\Lib;
 class IsAvailableActionRun extends \LibFunction
 {
 
-    public function run($object, $action)
+    public function run($action)
     {
-
         $available_run = true;
         $needVerifyAvailable = $action->needVerifyAvailable ?? false;
         if ($needVerifyAvailable) {
             $availableAbility = $this->lib->getAbilityForAction($action);
-            $available_run = $object->$availableAbility ?? false;
+            $available_run = $action->runParam->object->$availableAbility ?? false;
         }
 
         return $available_run;

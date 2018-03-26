@@ -12,21 +12,20 @@ require_once __DIR__ . '/vendor/autoload.php';
 //}
 
 
-$lib = new Lib();
+$lib = new \DanchukAS\AmadeusTechTask123\Lib();
 
 $animal_collection = $lib->initAmadeusZooAnimalCollection();
-$zoo = $lib->createObject(Zoo::class);
+$zoo = $lib->createObject(\Zoo::class);
 $lib->setAnimalCollection($zoo, $animal_collection);
 
-// for not mix error and output.
 ob_start();
 
 $lib->live($zoo);
 
-sleep(1);
+// for not mix error and output. often help, but not always.
+usleep(1000000);
 ob_end_flush();
 
-// @todo Lifecycle to lifecycleLib
 // @todo Action to Action Object, and ActionLib
 // @todo setFunctionalityLib  ... create functionalityObject extends Functionality Object
 // @todo composer auto update

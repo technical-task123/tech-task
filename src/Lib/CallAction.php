@@ -16,11 +16,10 @@ class CallAction extends \LibFunction
     {
         $class = $this->lib->getActionClass($action_name, $object);
 
-        $run_param = [
-            $action_name,
-            $object,
-            $action_param
-        ];
+        $run_param = new \stdClass();
+        $run_param->object = $object;
+        $run_param->actionName = $action_name;
+        $run_param->additionalParam = $action_param;
 
         $this->lib->runNewAction($class, $run_param);
     }

@@ -13,16 +13,6 @@ use DanchukAS\AmadeusTechTask123\Action;
 
 class Output extends Action
 {
-    function run($run_param)
-    {
-        [$action, $object, $action_param] = $run_param;
+    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\Output::class;
 
-        $message = $this->lib->getName($object) . ' ' . $action;
-
-        if ($action_param !== null) {
-            $message .= ' ' . implode(', ', $action_param);
-        }
-
-        $this->lib->output($message);
-    }
 }

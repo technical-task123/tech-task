@@ -15,10 +15,5 @@ class Walk extends Action
 {
     use \TNeedVerifyAvailable, \TAvailableWalk;
 
-    public function run($run_param)
-    {
-        [, $object] = $run_param;
-
-        $this->lib->callAction($object, 'walking');
-    }
+    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\Walk::class;
 }

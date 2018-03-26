@@ -13,14 +13,5 @@ use DanchukAS\AmadeusTechTask123\Action;
 
 class UndefinedAction extends Action
 {
-    public function run($run_param)
-    {
-        $action = \ucfirst($run_param[0]);
-        $action_class = __NAMESPACE__ . '\\' . $action;
-        if (!class_exists($action_class)) {
-            $action_class = Output::class;
-        }
-
-        $this->lib->runNewAction($action_class, $run_param);
-    }
+    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\UndefinedAction::class;
 }

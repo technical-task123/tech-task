@@ -9,14 +9,13 @@ declare(strict_types=1);
 namespace DanchukAS\AmadeusTechTask123;
 
 
-abstract class AAction implements \IRunnable
+abstract class AAction
 {
     /**
-     * @var \ILib
+     * @var \DanchukAS\AmadeusTechTask123\ILib
      */
     public $lib;
 
-    public function run($run_param)
-    {
-    }
+    public $runParam;
+
 }
