@@ -30,11 +30,13 @@ class CreateObject extends \LibFunction
 {
 
     /**
-     * Method is non static and named "run" for uniform and centralised call alike other "LibFunctions"
-     * and for has all benefits of "LibFunctions"
-     * @see \LibFunction for view all benefits of "LibFunctions"
+     * Create object by class name and return it.
      *
-     * @param string|null $class_name
+     * Method is non static and named "run" for uniform and centralised call alike other "LibFunctions"
+     * and for has all benefits of "LibFunctions".
+     * @see \LibFunction for view all benefits of "LibFunctions".
+     *
+     * @param string|null $class_name Fully qualified or qualified or unqualified name.
      *
      * @return object
      */
@@ -54,6 +56,7 @@ class CreateObject extends \LibFunction
             $class_name = '\\' . $class_name;
         }
 
+        // Delegate finding and including the source file for $class_name on the outside.
         return new $class_name();
     }
 
