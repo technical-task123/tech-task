@@ -18,13 +18,6 @@ abstract class ALib
     private $baseLib;
 
     private $thisClassName;
-
-
-    protected function getCalledClassName($methodName)
-    {
-        return $this->getBaseNamespace() . $this->getThisClassName() . '\\' . ucfirst($methodName);
-    }
-
     private $propertyList = [];
     private $methodList = [];
 
@@ -41,6 +34,29 @@ abstract class ALib
         return $this->propertyList[$name];
     }
 
+    public function __set($name, $value)
+    {
+        $this->propertyList[$name] = $value;
+    }
+
+    private function getBaseLib(): ALib
+    {
+        if (null === $this->baseLib) {
+            $this->baseLib = $this;
+        }
+
+        return $this->baseLib;
+    }
+
+    private function getBaseNamespace()
+    {
+        if (null === $this->baseNamespace) {
+            $this->baseNamespace = '\\' . \str_replace($this->getThisClassName(), '', static::class);
+        }
+
+        return $this->baseNamespace;
+    }
+
     private function getThisClassName()
     {
         if (empty($this->thisClassName)) {
@@ -50,16 +66,10 @@ abstract class ALib
         return $this->thisClassName;
     }
 
-    public function __set($name, $value)
-    {
-        $this->propertyList[$name] = $value;
-    }
-
     public function __isset($name)
     {
         return \array_key_exists($name, $this->propertyList);
     }
-
 
     public function __call($methodName, $arguments)
     {
@@ -73,22 +83,9 @@ abstract class ALib
         return $this->methodList[$methodName]->run(...$arguments);
     }
 
-    private function getBaseNamespace()
+    protected function getCalledClassName($methodName)
     {
-        if (null === $this->baseNamespace) {
-            $this->baseNamespace = '\\' . \str_replace($this->getThisClassName(), '', static::class);
-        }
-
-        return $this->baseNamespace;
-    }
-
-    private function getBaseLib(): ALib
-    {
-        if (null === $this->baseLib) {
-            $this->baseLib = $this;
-        }
-
-        return $this->baseLib;
+        return $this->getBaseNamespace() . $this->getThisClassName() . '\\' . ucfirst($methodName);
     }
 
 }

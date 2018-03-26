@@ -10,10 +10,11 @@ declare(strict_types=1);
 namespace DanchukAS\AmadeusTechTask123\Action;
 
 use DanchukAS\AmadeusTechTask123\Action;
+use DanchukAS\AmadeusTechTask123\TAvailableWalk;
 
 class Walk extends Action
 {
-    use \TNeedVerifyAvailable, \TAvailableWalk;
+    use \TNeedVerifyAvailable, TAvailableWalk;
 
     public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\Walk::class;
 }

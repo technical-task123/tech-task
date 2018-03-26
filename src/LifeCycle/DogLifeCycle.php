@@ -13,7 +13,7 @@ class DogLifeCycle extends \EatLifeCycle
         $this->lib->callAction($object, 'walk');
         $this->lib->callAction($object, 'run');
         $this->lib->callAction($object, 'wuf');
-        
+
         // @todo "byte -> has bitten" is not action, it is setState and trigger on setState
         $this->lib->callAction($object, 'has bitten', ['man']);
 

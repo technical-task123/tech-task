@@ -1,21 +1,15 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/vendor/autoload.php';
+use DanchukAS\AmadeusTechTask123\ILib;
 
-//class Animal
-//{
-//    public function byte($object)
-//    {
-//        echo $this->name . ' has bitten' . $object;
-//    }
-//}
+require_once __DIR__ . '/../vendor/autoload.php';
 
-
+/** @var ILib $lib */
 $lib = new \DanchukAS\AmadeusTechTask123\Lib();
 
 $animal_collection = $lib->initAmadeusZooAnimalCollection();
-$zoo = $lib->createObject(\Zoo::class);
+$zoo = $lib->base->createObject(\Zoo::class);
 $lib->setAnimalCollection($zoo, $animal_collection);
 
 ob_start();
@@ -26,9 +20,7 @@ $lib->live($zoo);
 usleep(1000000);
 ob_end_flush();
 
-// @todo setFunctionalityLib  ... create functionalityObject extends Functionality Object
 // @todo composer auto update
-// @todo namespace DanchukAS/tech-task-123 but what about conflict and easy replace ?
 // @todo composer.json max
 // @todo composer  "provide": {"DanchukAS/Zoo": "1.0.*"}
 // @todo docker
@@ -43,4 +35,12 @@ ob_end_flush();
 // @todo documentation for ILibGenerator.php, LibFunction
 // @todo say Olga by skype
 // @todo add Phing with phpdoc
+
+//class Animal
+//{
+//    public function byte($object)
+//    {
+//        echo $this->name . ' has bitten' . $object;
+//    }
+//}
 

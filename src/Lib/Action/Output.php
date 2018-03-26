@@ -19,7 +19,7 @@ class Output extends \LibFunction
             $message .= ' ' . implode(', ', $action_param);
         }
 
-        $this->lib->output($message);
+        $this->lib->base->output($message);
     }
 
 }

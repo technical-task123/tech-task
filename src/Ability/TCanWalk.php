@@ -6,6 +6,11 @@ declare(strict_types=1);
  * User: danchukas
  * Date: 2018-03-24 09:39
  */
+
+
+namespace DanchukAS\AmadeusTechTask123;
+
+
 trait TCanWalk
 {
     public $canWalk = true;

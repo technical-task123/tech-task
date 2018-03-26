@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+use DanchukAS\AmadeusTechTask123\TCanWalk;
+
 /**
  * Created by PhpStorm.
  * User: danchukas

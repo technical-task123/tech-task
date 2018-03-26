@@ -17,20 +17,14 @@ namespace DanchukAS\AmadeusTechTask123;
  *
  * @property ILib\IAction action
  *
+ * @property ILib\IBase base
+ *
  * @method callAction($object, string $action_name, array $action_param = null) {
  * @see \DanchukAS\AmadeusTechTask123\Lib\CallAction::run
  * }
  *
  * @method createAnimal($name, $class = \Animal::class) {
  * @see \DanchukAS\AmadeusTechTask123\Lib\CreateAnimal::run
- * }
- *
- * @method createFunctionalObject($class = null) {
- * @see \DanchukAS\AmadeusTechTask123\Lib\CreateFunctionalObject::run
- * }
- *
- * @method createObject($class = null) {
- * @see \DanchukAS\AmadeusTechTask123\Lib\CreateObject::run
  * }
  *
  * @method getAbilityForAction($action) {
@@ -71,10 +65,6 @@ namespace DanchukAS\AmadeusTechTask123;
  *
  * @method live($object) {
  * @see \DanchukAS\AmadeusTechTask123\Lib\Live::run
- * }
- *
- * @method output($message) {
- * @see \DanchukAS\AmadeusTechTask123\Lib\Output::run
  * }
  *
  * @method runAction($action) {

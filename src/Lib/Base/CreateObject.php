@@ -18,7 +18,8 @@ declare(strict_types=1);
  *
  * @since 1.0.1 First time this was introduced.
  */
-namespace DanchukAS\AmadeusTechTask123\Lib;
+
+namespace DanchukAS\AmadeusTechTask123\Lib\Base;
 
 
 /**
