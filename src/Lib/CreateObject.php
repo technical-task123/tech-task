@@ -1,6 +1,23 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * Created by PhpStorm.
+ * User: danchukas
+ * Date: 2018-03-23 19:12
+ *
+ * @since 1.0.0 First time this was introduced.
+ */
+
+/**
+ * This namespace is required "\DanchukAS\AmadeusTechTask123\Lib"
+ * to search for this file in the directory relative to the file
+ * in which the "\DanchukAS\AmadeusTechTask123\Lib" class is implemented.
+ *
+ * @see \DanchukAS\AmadeusTechTask123\Lib All benefits of "\DanchukAS\AmadeusTechTask123\Lib".
+ *
+ * @since 1.0.0 First time this was introduced.
+ */
 namespace DanchukAS\AmadeusTechTask123\Lib;
 
 
@@ -24,7 +41,10 @@ namespace DanchukAS\AmadeusTechTask123\Lib;
  * - add monitoring for creation process
  * - add handling to creation process (try ... catch, etc.)
  *
+ * @see \DanchukAS\AmadeusTechTask123\Lib how to use and is implemented the call of this class.
+ *
  * @package DanchukAS\AmadeusTechTask123\Lib
+ * @since 1.0.0 First time this was introduced.
  */
 class CreateObject extends \LibFunction
 {
@@ -32,9 +52,10 @@ class CreateObject extends \LibFunction
     /**
      * Create object by class name and return it.
      *
-     * Method is non static and named "run" for uniform and centralised call alike other "LibFunctions"
-     * and for has all benefits of "LibFunctions".
-     * @see \LibFunction for view all benefits of "LibFunctions".
+     * Method is non static and named "run" for uniform and centralised call by \DanchukAS\AmadeusTechTask123\Lib
+     * alike other "LibFunctions" and for has all benefits of "LibFunctions".
+     * @see \LibFunction All benefits of "LibFunctions".
+     * @see \DanchukAS\AmadeusTechTask123\Lib how to use and is implemented the call to this method.
      *
      * @param string|null $class_name Fully qualified or qualified or unqualified name.
      *
