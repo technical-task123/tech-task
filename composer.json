@@ -1,4 +1,7 @@
 {
+  "homepage": "https://github.com/danchukas/tech-task",
+  "name": "danchukas/tech-task123",
+  "description": "task from Amadeus",
   "authors": [
     {
       "name": "Danchuk Anatoliy",
@@ -10,5 +13,18 @@
     "classmap": [
       "src"
     ]
+  },
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload-dev": {
+    "psr-4": {
+      "DanchukAS\\Test\\": "test/"
+    }
   }
 }
