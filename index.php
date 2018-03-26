@@ -26,7 +26,6 @@ $lib->live($zoo);
 usleep(1000000);
 ob_end_flush();
 
-// @todo Action to Action Object, and ActionLib
 // @todo setFunctionalityLib  ... create functionalityObject extends Functionality Object
 // @todo composer auto update
 // @todo namespace DanchukAS/tech-task-123 but what about conflict and easy replace ?
@@ -43,4 +42,5 @@ ob_end_flush();
 // @todo pullRequest to Amadeus
 // @todo documentation for ILibGenerator.php, LibFunction
 // @todo say Olga by skype
+// @todo add Phing with phpdoc
 

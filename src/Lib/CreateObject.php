@@ -16,7 +16,7 @@ declare(strict_types=1);
  *
  * @see \DanchukAS\AmadeusTechTask123\Lib All benefits of "\DanchukAS\AmadeusTechTask123\Lib".
  *
- * @since 1.0.0 First time this was introduced.
+ * @since 1.0.1 First time this was introduced.
  */
 namespace DanchukAS\AmadeusTechTask123\Lib;
 
@@ -57,23 +57,24 @@ class CreateObject extends \LibFunction
      * @see \LibFunction All benefits of "LibFunctions".
      * @see \DanchukAS\AmadeusTechTask123\Lib how to use and is implemented the call to this method.
      *
-     * @param string|null $class_name Fully qualified or qualified or unqualified name.
+     * @param string|null $class_name Fully qualified or qualified or unqualified name
      *
-     * @return object
+     * @return mixed
+     *
+     * @since 1.0.0 Fix bug with param as fully qualified name.
      */
-    public function run(string $class_name = null): object
+    public function run(string $class_name = null)
     {
         // Support empty object.
         if (null === $class_name) {
             $class_name = \stdClass::class;
         }
 
-        // For class names alike as class in global namespace
+        // Make fully qualified name from qualified or unqualified.
+        // For uniform behavior of load class
+        // named class as it is in global namespace
+        // instead wrong next load with prefixed current file namespace.
         if ('\\' !== $class_name[0]) {
-
-            // For uniform behavior of load class
-            // named class as it is in global namespace
-            // instead wrong next load with prefixed current file namespace.
             $class_name = '\\' . $class_name;
         }
 
