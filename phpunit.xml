@@ -3,15 +3,19 @@
          xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="./vendor/autoload.php"
          colors="true">
+
     <testsuites>
         <testsuite name="All">
-            <directory>./test</directory>
+            <directory suffix="BaseTest.php">./test</directory>
+            <directory suffix="AdditionalTest.php">./test</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./Lib</directory>
+            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./public</directory>
+            <directory suffix=".php">./util</directory>
         </whitelist>
     </filter>
 
