@@ -27,6 +27,10 @@ namespace DanchukAS\AmadeusTechTask123;
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Output::run
  * }
  *
+ * @method buildZoo($animal_collection = null) {
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\BuildZoo::run
+ * }
+ *
  * @method callAction($object, string $action_name, array $action_param = null) {
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CallAction::run
  * }
@@ -41,6 +45,10 @@ namespace DanchukAS\AmadeusTechTask123;
  *
  * @method createRunParam(string $class = null) {
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateRunParam::run
+ * }
+ *
+ * @method createZoo($class = null) {
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateZoo::run
  * }
  *
  * @method getAbilityForAction($action) {

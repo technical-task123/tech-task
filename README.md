@@ -13,4 +13,7 @@
         - what class has changed namespace (specially or accidentally(!))
     - main - only for verify success result.
     
+# Problems
+- need manual composer update (in PHPStorm: Tools->Composer->Update) after create files or after edit class names or namespace. Filewatcher  
+- Sometimes(not relate of time after last execution) composer not update class map(but why?). Temporary resolution - repeat composer update few ones.      
 
