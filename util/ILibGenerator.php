@@ -103,7 +103,7 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
 
 
         $declare = " * @method $declare {
- *  @uses $class::run
+ * \t@uses $class::run
  * }";
 
         $body[] = /*$php_doc . PHP_EOL .*/

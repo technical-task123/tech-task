@@ -5,13 +5,22 @@
 - see result
 - run php unit test
 
-# Ready for max:
+# Finalised files:
 - src/GlobalFunction/GlobalFunctionLib/Base/CreateObject.php
-- apache.conf (full ready) - way of my thinks and result.
-- test (only few tests):
-    - Lib/CreateObject/CreateObjectBaseTest as example for easy check and remember:
-        - what class has changed namespace (specially or accidentally(!))
-    - main - only for verify success result.
+- apache.conf  - way of my thinks and result.
+- Dockerfile
+
+# Especially files
+- test/Lib/CreateObject/CreateObjectBaseTest.php as example of easy check and for remember:
+  - what class has changed namespace (specially or accidentally(!))
+  - what class has ceased to exist.
+- test/Lib/CreateObject/CreateObjectAdditionalTest.php as example of right relations in tests:
+  - tests where called method "run" have not reason call while test for method "run" is not successfully. 
+  - when possible used DRY for tests.  
+  - used data providers for compact cover of most possible situations.
+     
+# Useful test    
+   - /test/indexTest.php verify stdout and stderr after call public/index.php.
 
 # Integrated thoughts in the project:
 - comment thoughts in appropriate places. It helps to self and another developer 
@@ -49,19 +58,24 @@
   For this project it is DanchukAS\AmadeusTechTask123.
   For test of this project it is DanchukAS\AmadeusTechTask123Test. 
   @todo Add namespace to all files.
+  
 - namespaces for type of entities is good 
-  for identify, differ from another class with same or similar names.      
+  for identify, differ from another class with same or similar names.
+        
 - but namesplaces like PSR-4 is not really necessary there. 
   Auto generating class map give more freedom to refactor 
   alike adding intermediate file directory without manipulation with longer namespace.
+  
   Examples: 
   - directory src/GlobalFunction,
   - directory src/GlobalFunction/GlobalFunctionLib/Base 
   - file src/GlobalFunction/GlobalFunctionLib/Base/CreateObject.php
+  
 - For more readable files, class names and code used them:
   - Interfaces have prefix I instead suffix Interface
   - Traits have prefix T instead suffix Trait
-  - Abstract classes have prefix A instead prefix Abstract          
+  - Abstract classes have prefix A instead prefix Abstract
+            
 - Some settings from .idea existed in repo for share setting 
   and equally inspect project together.    
     
