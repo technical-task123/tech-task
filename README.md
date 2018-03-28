@@ -88,3 +88,38 @@
       after create files or after edit class names or namespace.
 - util/ILibGenerator generate interfaces for "middleware classes" 
   which has __call instead implementation of methods.      
+  
+# Directory structure of project:
+- public Place for accessible files for web server
+- src/Ability Library of animal abilities. 
+  What animals can do and what default action for ability.
+- src/ActionFunction Implementation of actions, not only for animal.
+- src/ActionObject Library of actions.
+  What can to do with animal, what ability animal need for available run action.
+- src/GlobalFunction Main library of functions.
+- src/LifeCycle Library of object's life cycles.
+  What object to do step by step.
+- src/Object Other no sorted entities.
+- util Place for console utility for code support.
+- test/Mock Examples/Mocks for tests.
+- test/Provider - combine and prepare mocks for use in tests.
+
+# Main files:
+- public/index.php Main entry point.
+- util/ILibGenerator.php Generate interfaces for possible IDE auto complete methods 
+  of some classes as GlobalFunction, ActionFunction.
+- ALib Realise 1 file = 1 class = 1 method. Any subdirectories for group files. 
+  Subdirectories have not any affect. They increase usefully search necessaries files. 
+- test/TestCase.php It is parent only for base test of classes.
+- apache.conf Available run script by browser. Used by Dockerfile.
+- composer.json Autoloader by class map, provide phpunit.
+- Dockerfile, docker-compose.yml Available easy run project on clear machine, 
+  test minimal requirements.
+- phpunit.xml Check covering by tests. Where are tests, how load them.
+  
+# Todo:
+- usable builders
+- usable naming
+- usable directory hierarchy
+- review todo in files
+- add time step for life cycle process
