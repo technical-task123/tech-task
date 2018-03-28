@@ -11,7 +11,9 @@ declare(strict_types=1);
 /**
  * Class ALib
  *
- * @todo Think what Lib is ? IF only functions lib - delete deprecated method and refactor class.
+ * @todo What is FunctionLibrary ? Danchuk Anatoliy vote "yes".
+ * If only functions library without hierarchy by properties
+ * than delete deprecated method and refactor class.
  */
 abstract class ALib
 {
@@ -22,7 +24,9 @@ abstract class ALib
     private $thisClassName;
 
     /**
-     * @deprecated
+     * @deprecated Because used only in deprecated methods
+     * @since 1.0.5
+     *
      * @var array
      */
     private $propertyList = [];
@@ -31,6 +35,8 @@ abstract class ALib
 
     /**
      * @deprecated
+     * @see ALib annotation for understand why deprecated, how and when resolve situation.
+     * @since 1.0.5
      *
      * @param $name
      * @return mixed
@@ -50,6 +56,8 @@ abstract class ALib
 
     /**
      * @deprecated
+     * @see ALib annotation for understand why deprecated, how and when resolve situation.
+     * @since 1.0.5
      *
      * @param $name
      * @param $value
@@ -62,6 +70,8 @@ abstract class ALib
 
     /**
      * @deprecated
+     * @see ALib annotation for understand why deprecated, how and when resolve situation.
+     * @since 1.0.5
      *
      * @param $name
      * @return bool

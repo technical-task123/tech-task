@@ -103,7 +103,7 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
 
 
         $declare = " * @method $declare {
- *  @see $class::run
+ *  @uses $class::run
  * }";
 
         $body[] = /*$php_doc . PHP_EOL .*/
@@ -123,6 +123,12 @@ function write_to_file($namespace, $lib_name, $body, $this_file, $file_dest)
 {
     $body = implode(PHP_EOL . ' *' . PHP_EOL, $body);
 
+    $file_source = preg_replace('%(.*/)I([^/]+)%', '${1}${2}', $file_dest);
+
+    global $project_dir;
+
+    $file_source = str_replace($project_dir, '', $file_source);
+
     $body = "<?php
 declare(strict_types=1);
 
@@ -137,7 +143,7 @@ namespace $namespace;
  * ============ WARNING ==================== 
  * = Not edit manual !                     =
  * = If you want change something          =
- * = create new class and inherit by this. = 
+ * = see implementation in $file_source = 
  * =========================================
  *
 $body

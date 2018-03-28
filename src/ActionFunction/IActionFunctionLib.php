@@ -12,19 +12,19 @@ namespace DanchukAS\AmadeusTechTask123;
  * ============ WARNING ==================== 
  * = Not edit manual !                     =
  * = If you want change something          =
- * = create new class and inherit by this. = 
+ * = see implementation in /src/ActionFunction/ActionFunctionLib.php = 
  * =========================================
  *
  * @method output($action) {
- * @see \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Output::run
+ * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Output::run
  * }
  *
  * @method undefinedAction(AAction $action) {
- * @see \DanchukAS\AmadeusTechTask123\ActionFunctionLib\UndefinedAction::run
+ * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\UndefinedAction::run
  * }
  *
  * @method walk(AAction $action) {
- * @see \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Walk::run
+ * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Walk::run
  * }
  */
 interface IActionFunctionLib

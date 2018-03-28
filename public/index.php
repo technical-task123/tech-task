@@ -7,11 +7,6 @@ namespace DanchukAS\AmadeusTechTask123;
 // Include composer's autoload as the only autoload for this project.
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// More readable(than default html) output in web browser
-// without any changes in project's functions.
-// It is not necessary to set Content-type in web server config.
-\header('Content-type: text/plain');
-
 /** @var IGlobalFunctionLib $lib */
 $lib = new GlobalFunctionLib();
 
