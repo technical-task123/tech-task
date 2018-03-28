@@ -101,7 +101,7 @@ abstract class ALib
     public function __call($methodName, $arguments)
     {
         if (!\array_key_exists($methodName, $this->methodList)) {
-            $class = self::getCalledClassName($methodName);
+            $class = $this->getCalledClassName($methodName);
             $method = new $class;
             $method->lib = $this->getBaseLib();
             $this->methodList[$methodName] = $method;

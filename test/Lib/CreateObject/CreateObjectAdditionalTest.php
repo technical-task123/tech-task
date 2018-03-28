@@ -27,8 +27,9 @@ class CreateObjectAdditionalTest extends TestCase
      * Default value present because "@depend CreateObjectBaseTest::testClassExist" not work
      *
      */
-    public function testCreateInstance($tested_class_name = CreateObjectBaseTest::TESTED_CLASS_NAME)
+    public function testCreateInstance($tested_class_name = null)
     {
+        $tested_class_name = $tested_class_name ?? CreateObjectBaseTest::TESTED_CLASS_NAME;
         $instance_tested_class = new $tested_class_name();
 
         $message = 'Constructor return something else of created object.';
@@ -45,7 +46,7 @@ class CreateObjectAdditionalTest extends TestCase
      */
     public function testConstructor($instance_tested_class)
     {
-        $message = "Class constructor return object of not self class.";
+        $message = 'Class constructor return object of not self class.';
         self::assertInstanceOf(CreateObjectBaseTest::TESTED_CLASS_NAME, $instance_tested_class, $message);
     }
 
@@ -125,7 +126,8 @@ class CreateObjectAdditionalTest extends TestCase
 
         $class = $param ?? \stdClass::class;
 
-        $message = 'Created object by "' . CreateObjectBaseTest::TESTED_CLASS_NAME . '" is not identify created by "new"';
+        $message = 'Created object by "' . CreateObjectBaseTest::TESTED_CLASS_NAME
+            . '" is not identify created by "new"';
         self::assertEquals(new $class, $object, $message);
     }
 

@@ -11,7 +11,7 @@ class UndefinedAction extends \LibFunction
 
     public function run(AAction $action)
     {
-        $action_name = $action->runParam->actionName;
+        $action_name = $action->runParam->name;
         $action_class = '\DanchukAS\AmadeusTechTask123\Action\\' . \ucfirst($action_name);
         if (!class_exists($action_class)) {
             $action_class = \DanchukAS\AmadeusTechTask123\Action\Output::class;

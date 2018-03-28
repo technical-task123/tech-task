@@ -17,14 +17,14 @@ class IndexTest extends TestCase
     /**
      * @before
      */
-    function resetError()
+    public function resetError()
     {
         self::$error = [];
     }
 
     public function testOutput()
     {
-        $expectedNormal = "cat walking
+        $expected_normal = 'cat walking
 cat meow
 cat eat food
 dog walking
@@ -37,16 +37,17 @@ sparrow fly
 sparrow eat food
 rat pi
 rat eat food
-monkey eat food";
+monkey eat food';
 
-        $regexpExpectedError = [
+        $regexp_expected_error = [
             '%Action "walking" is not available for run with next param:%',
             '%\[object\] => Sparrow Object%'
         ];
 
-        $regexExpectedOutput = "/^$expectedNormal$/";
+        $regex_expected_output = "/^$expected_normal$/";
 
-        \set_error_handler(function ($errno, $mesage) {
+        \set_error_handler(function (/** @noinspection PhpUnusedParameterInspection */
+            $errno, $mesage) {
             IndexTest::$error[] = $mesage;
         });
 
@@ -59,10 +60,12 @@ monkey eat food";
 
         self::assertCount(1, self::$error);
 
-        foreach ($regexpExpectedError as $regexp) {
-            self::assertRegExp($regexp, \current(self::$error));
+
+        $error = \current(self::$error);
+        foreach ($regexp_expected_error as $regexp) {
+            self::assertRegExp($regexp, $error);
         }
 
-        self::assertRegExp($regexExpectedOutput, $output);
+        self::assertRegExp($regex_expected_output, $output);
     }
 }

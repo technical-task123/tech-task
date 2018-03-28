@@ -31,7 +31,7 @@ getLibMethods(
 );
 
 
-function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null, $lib_name = null, $first_dir = null)
+function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null, $lib_name = null, $first_dir = null, $return = false)
 {
 
     $r = new \ReflectionMethod(\ALib::class, 'getCalledClassName');
@@ -74,7 +74,9 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
 //            $child_lib_object = $lib_object->$property;
 //            call_user_func(__FUNCTION__, $child_dir, $child_dir_dest, $child_namespace, $child_path, $child_lib_object);
 
-            \call_user_func(__FUNCTION__, $child_dir, $dir_dest, $namespace, $path, $lib_object, $lib_name, $first_dir);
+            $body_child = \call_user_func(__FUNCTION__, $child_dir, $dir_dest, $namespace, $path, $lib_object, $lib_name, $first_dir, true);
+
+            $body = \array_merge($body, $body_child);
 
             continue;
         }
@@ -108,9 +110,18 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
             $declare;
     }
 
-    $body = implode(PHP_EOL . ' *' . PHP_EOL, $body);
+    if ($return) {
+        return $body;
+    }
 
     global $this_file;
+    write_to_file($namespace, $lib_name, $body, $this_file, $file_dest);
+
+}
+
+function write_to_file($namespace, $lib_name, $body, $this_file, $file_dest)
+{
+    $body = implode(PHP_EOL . ' *' . PHP_EOL, $body);
 
     $body = "<?php
 declare(strict_types=1);
@@ -138,8 +149,6 @@ interface $lib_name
 ";
 
     file_put_contents($file_dest, $body);
-
-
 }
 
 

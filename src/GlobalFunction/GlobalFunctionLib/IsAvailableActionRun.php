@@ -13,6 +13,7 @@ class IsAvailableActionRun extends \LibFunction
         $needVerifyAvailable = $action->needVerifyAvailable ?? false;
         if ($needVerifyAvailable) {
             $availableAbility = $this->lib->getAbilityForAction($action);
+            /** @noinspection PhpVariableVariableInspection */
             $available_run = $action->runParam->object->$availableAbility ?? false;
         }
 

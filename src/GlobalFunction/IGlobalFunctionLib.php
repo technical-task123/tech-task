@@ -15,6 +15,18 @@ namespace DanchukAS\AmadeusTechTask123;
  * = create new class and inherit by this. = 
  * =========================================
  *
+ * @method createFunctionalObject($class = null) {
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateFunctionalObject::run
+ * }
+ *
+ * @method createObject(string $class_name = null) {
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateObject::run
+ * }
+ *
+ * @method output($message) {
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Output::run
+ * }
+ *
  * @method callAction($object, string $action_name, array $action_param = null) {
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CallAction::run
  * }
@@ -23,11 +35,11 @@ namespace DanchukAS\AmadeusTechTask123;
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAction::run
  * }
  *
- * @method createAnimal($name, $class = \Animal::class) {
+ * @method createAnimal($name, $class = null) {
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAnimal::run
  * }
  *
- * @method createRunParam(\ARunParam $class = null) {
+ * @method createRunParam(string $class = null) {
  * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateRunParam::run
  * }
  *

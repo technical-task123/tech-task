@@ -9,8 +9,7 @@ class GetAbilityForAction extends \LibFunction
 
     public function run($action)
     {
-        $ability = $action->availableAbility;
-        return $ability;
+        return $action->availableAbility;
     }
 
 }

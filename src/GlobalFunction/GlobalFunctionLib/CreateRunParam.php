@@ -9,7 +9,7 @@ use DanchukAS\AmadeusTechTask123\RunParam;
 class CreateRunParam extends \LibFunction
 {
 
-    public function run(\ARunParam $class = null)
+    public function run(string $class = null)
     {
         $class = $class ?? RunParam::class;
         return $this->lib->createObject($class);

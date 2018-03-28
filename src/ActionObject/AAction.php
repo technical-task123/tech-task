@@ -19,5 +19,6 @@ abstract class AAction implements \IHasRunParam
      */
     public $lib;
 
+    public $initializer;
 
 }

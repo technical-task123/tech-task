@@ -13,6 +13,7 @@ class MergeRunParam extends \LibFunction
         foreach ($additionRunParam as $runParam) {
             foreach ($runParam as $name => $value) {
                 if (null !== $value) {
+                    /** @noinspection PhpVariableVariableInspection */
                     $merged_run_param->$name = $value;
                 }
             }

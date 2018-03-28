@@ -10,9 +10,10 @@ declare(strict_types=1);
 
 namespace DanchukAS\AmadeusTechTask123;
 
+use DanchukAS\AmadeusTechTask123\Action\Walk;
 
 trait TCanWalk
 {
     public $canWalk = true;
-    public $walkMethod = \DanchukAS\AmadeusTechTask123\Action\Walk::class;
+    public $walkMethod = Walk::class;
 }
