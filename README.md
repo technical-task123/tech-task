@@ -1,12 +1,12 @@
 # How check result
 - checkout repo
 - run docker compose
-- in your hosts add "0.0.0.0 docker.local" 
-- go to http://docker.local:8099
+- go to http://0.0.0.0:8099/ on host machine
 - see result
 - run php unit test
 
-# See
+# Ready for max:
+- src/GlobalFunction/GlobalFunctionLib/Base/CreateObject.php
 - apache.conf (full ready) - way of my thinks and result.
 - test (only few tests):
     - Lib/CreateObject/CreateObjectBaseTest as example for easy check and remember:

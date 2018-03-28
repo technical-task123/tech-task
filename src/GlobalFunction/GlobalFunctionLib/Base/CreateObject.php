@@ -7,14 +7,13 @@ declare(strict_types=1);
  * Date: 2018-03-23 19:12
  *
  * @since 1.0.0 First time this was introduced.
+ * @author Danchuk Anatoliy
  */
 
 /**
- * This namespace is required "\DanchukAS\AmadeusTechTask123\Lib"
- * to search for this file in the directory relative to the file
- * in which the "\DanchukAS\AmadeusTechTask123\Lib" class is implemented.
- *
- * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib Benefits.
+ * This namespace is required by "\DanchukAS\AmadeusTechTask123\GlobalFunctionLib"
+ * to include this file.
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib Implementation of search/include/call.
  *
  * @since 1.0.5 Change namespace from "DanchukAS\AmadeusTechTask123\Lib\Base" to "DanchukAS\AmadeusTechTask123\Lib"
  * @since 1.0.1 First time this was introduced.
@@ -34,7 +33,9 @@ namespace DanchukAS\AmadeusTechTask123\GlobalFunctionLib;
  * to processes of find class and creation object.
  * Is possibile include any triggers on finding class, pre and post creation.
  *
- * Example:
+ * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib How to call and how is implemented the call of this class.
+ *
+ * Example of possible injection:
  * - add a secondary using of all or some created instances,
  * instead creation every time new.
  * - add property
@@ -43,9 +44,8 @@ namespace DanchukAS\AmadeusTechTask123\GlobalFunctionLib;
  * - add monitoring for creation process
  * - add handling to creation process (try ... catch, etc.)
  *
- * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib how to use and is implemented the call of this class.
- *
  * @package DanchukAS\AmadeusTechTask123\GlobalFunctionLib
+ *
  * @since 1.0.0 First time this was introduced.
  */
 class CreateObject extends \LibFunction
@@ -59,9 +59,9 @@ class CreateObject extends \LibFunction
      * @see \LibFunction All benefits of "LibFunctions".
      * @see \DanchukAS\AmadeusTechTask123\GlobalFunctionLib how to use and is implemented the call to this method.
      *
-     * @param string|null $class_name Fully qualified or qualified or unqualified name
+     * @param string|null $class_name Fully qualified or qualified or unqualified name.
      *
-     * @return mixed
+     * @return mixed created class.
      *
      * @since 1.0.0 Fix bug with param as fully qualified name.
      */
