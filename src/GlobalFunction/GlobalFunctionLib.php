@@ -18,7 +18,7 @@ namespace DanchukAS\AmadeusTechTask123;
  *
  * @todo Auto generate this file instead ILib
  */
-class Lib extends \ALib
+class GlobalFunctionLib extends \ALib
 {
 
 }

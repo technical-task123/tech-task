@@ -17,12 +17,12 @@ $project_dir = \dirname(__DIR__, 1);
 
 require_once $project_dir . '/vendor/autoload.php';
 
-$dir = $project_dir . '/src/Lib';
-$dir_dest = $project_dir . '/src';
+$dir = $project_dir . '/src/GlobalFunction/GlobalFunctionLib';
+$dir_dest = $project_dir . '/src/GlobalFunction';
 
 $this_file = str_replace($project_dir . DIRECTORY_SEPARATOR, '', __FILE__);
 
-getLibMethods($dir, $dir_dest, 'DanchukAS\AmadeusTechTask123');
+getLibMethods($dir, $dir_dest, 'DanchukAS\AmadeusTechTask123', 'DanchukAS\AmadeusTechTask123');
 
 getLibMethods(
     $project_dir . '/src/ActionFunction/ActionFunctionLib',
@@ -31,7 +31,7 @@ getLibMethods(
 );
 
 
-function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null)
+function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null, $lib_name = null, $first_dir = null)
 {
 
     $r = new \ReflectionMethod(\ALib::class, 'getCalledClassName');
@@ -42,10 +42,12 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
         $lib_object = new $lib_object;
     }
 
-    static $first_dir = null;
-    $first_dir = $first_dir ?? $dir;
-
-    $lib_name = 'I' . basename($dir);
+    if (null === $first_dir) {
+        $first_dir = $dir;
+    }
+    if (null === $lib_name) {
+        $lib_name = 'I' . basename($dir);
+    }
     $file_dest = $dir_dest . DIRECTORY_SEPARATOR . "$lib_name.php";
 
     if (empty($path)) {
@@ -57,20 +59,22 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
     $m = \scandir($dir, SCANDIR_SORT_ASCENDING);
     $m = \array_slice($m, 2);
 
-    $child_dir_dest = $dir_dest . DIRECTORY_SEPARATOR . $lib_name;
-    $child_namespace = $namespace . '\\' . $lib_name;
+//    $child_dir_dest = $dir_dest . DIRECTORY_SEPARATOR . $lib_name;
+//    $child_namespace = $namespace . '\\' . $lib_name;
 
     foreach ($m as $filename) {
 
         $child_dir = $dir . DIRECTORY_SEPARATOR . $filename;
         if (is_dir($child_dir)) {
 
-            $child_path = $path . '\I' . $filename;
-            $property = lcfirst($filename);
-            $body[] = " * @property $child_path " . $property;
+//            $child_path = $path . '\I' . $filename;
+//            $property = lcfirst($filename);
+//            $body[] = " * @property $child_path " . $property;
+//
+//            $child_lib_object = $lib_object->$property;
+//            call_user_func(__FUNCTION__, $child_dir, $child_dir_dest, $child_namespace, $child_path, $child_lib_object);
 
-            $child_lib_object = $lib_object->$property;
-            call_user_func(__FUNCTION__, $child_dir, $child_dir_dest, $child_namespace, $child_path, $child_lib_object);
+            \call_user_func(__FUNCTION__, $child_dir, $dir_dest, $namespace, $path, $lib_object, $lib_name, $first_dir);
 
             continue;
         }

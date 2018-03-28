@@ -6,10 +6,11 @@ namespace DanchukAS\AmadeusTechTask123;
 // Only for auto complete by IDE.
 
 // Include composer's autoload as the only autoload for this project.
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 /** @var ILib $lib */
-$lib = new Lib();
+$lib = new GlobalFunctionLib();
 
 // Load animal collection from task.
 $animal_collection = $lib->initAmadeusZooAnimalCollection();

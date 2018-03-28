@@ -35,6 +35,7 @@ dog eat food
 sparrow tweet
 sparrow fly
 sparrow eat food
+rat pi
 rat eat food
 monkey eat food";
 

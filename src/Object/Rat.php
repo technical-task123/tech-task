@@ -12,4 +12,6 @@ class Rat extends Animal
 {
     use TCanWalk;
 
+    public $lifeCycle = RatLifeCycle::class;
+
 }

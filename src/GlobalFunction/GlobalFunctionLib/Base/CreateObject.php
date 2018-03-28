@@ -14,13 +14,13 @@ declare(strict_types=1);
  * to search for this file in the directory relative to the file
  * in which the "\DanchukAS\AmadeusTechTask123\Lib" class is implemented.
  *
- * @see \DanchukAS\AmadeusTechTask123\Lib All benefits of "\DanchukAS\AmadeusTechTask123\Lib".
+ * @see \DanchukAS\AmadeusTechTask123GlobalFunctionLib All benefits of "\DanchukAS\AmadeusTechTask123\Lib".
  *
  * @since 1.0.5 Change namespace from "DanchukAS\AmadeusTechTask123\Lib\Base" to "DanchukAS\AmadeusTechTask123\Lib"
  * @since 1.0.1 First time this was introduced.
  */
 
-namespace DanchukAS\AmadeusTechTask123\Lib;
+namespace DanchukAS\AmadeusTechTask123\GlobalFunctionLib;
 
 
 /**
@@ -43,7 +43,7 @@ namespace DanchukAS\AmadeusTechTask123\Lib;
  * - add monitoring for creation process
  * - add handling to creation process (try ... catch, etc.)
  *
- * @see \DanchukAS\AmadeusTechTask123\Lib how to use and is implemented the call of this class.
+ * @see \DanchukAS\AmadeusTechTask123GlobalFunctionLib how to use and is implemented the call of this class.
  *
  * @package DanchukAS\AmadeusTechTask123\Lib
  * @since 1.0.0 First time this was introduced.
@@ -57,7 +57,7 @@ class CreateObject extends \LibFunction
      * Method is non static and named "run" for uniform and centralised call by \DanchukAS\AmadeusTechTask123\Lib
      * alike other "LibFunctions" and for has all benefits of "LibFunctions".
      * @see \LibFunction All benefits of "LibFunctions".
-     * @see \DanchukAS\AmadeusTechTask123\Lib how to use and is implemented the call to this method.
+     * @see \DanchukAS\AmadeusTechTask123GlobalFunctionLib how to use and is implemented the call to this method.
      *
      * @param string|null $class_name Fully qualified or qualified or unqualified name
      *

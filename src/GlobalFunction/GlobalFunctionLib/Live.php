@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DanchukAS\AmadeusTechTask123\Lib;
+namespace DanchukAS\AmadeusTechTask123\GlobalFunctionLib;
 
 
 class Live extends \LibFunction

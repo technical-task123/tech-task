@@ -9,7 +9,7 @@ declare(strict_types=1);
 class LibFunction
 {
     /**
-     * @var \DanchukAS\AmadeusTechTask123\ILib
+     * @var \DanchukAS\AmadeusTechTask123\IGlobalFunctionLib
      */
     public $lib;
 
