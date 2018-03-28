@@ -10,6 +10,8 @@ declare(strict_types=1);
 
 /**
  * Class ALib
+ *
+ * @todo Think what Lib is ? IF only functions lib - delete deprecated method and refactor class.
  */
 abstract class ALib
 {
@@ -18,9 +20,21 @@ abstract class ALib
     private $baseLib;
 
     private $thisClassName;
+
+    /**
+     * @deprecated
+     * @var array
+     */
     private $propertyList = [];
+
     private $methodList = [];
 
+    /**
+     * @deprecated
+     *
+     * @param $name
+     * @return mixed
+     */
     public function __get($name)
     {
         if (!\array_key_exists($name, $this->propertyList)) {
@@ -34,9 +48,27 @@ abstract class ALib
         return $this->propertyList[$name];
     }
 
+    /**
+     * @deprecated
+     *
+     * @param $name
+     * @param $value
+     */
     public function __set($name, $value)
     {
         $this->propertyList[$name] = $value;
+    }
+
+
+    /**
+     * @deprecated
+     *
+     * @param $name
+     * @return bool
+     */
+    public function __isset($name)
+    {
+        return \array_key_exists($name, $this->propertyList);
     }
 
     private function getBaseLib(): ALib
@@ -64,11 +96,6 @@ abstract class ALib
         }
 
         return $this->thisClassName;
-    }
-
-    public function __isset($name)
-    {
-        return \array_key_exists($name, $this->propertyList);
     }
 
     public function __call($methodName, $arguments)

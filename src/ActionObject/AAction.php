@@ -9,13 +9,15 @@ declare(strict_types=1);
 namespace DanchukAS\AmadeusTechTask123;
 
 
-abstract class AAction
+abstract class AAction implements \IHasRunParam
 {
+    use \THasRunParam;
+
     /**
-     * @var \DanchukAS\AmadeusTechTask123\ILib
+     * @todo IHasLib, THasLib
+     * @var IGlobalFunctionLib
      */
     public $lib;
 
-    public $runParam;
 
 }

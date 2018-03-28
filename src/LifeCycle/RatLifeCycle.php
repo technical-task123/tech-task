@@ -10,7 +10,11 @@ class RatLifeCycle extends \EatLifeCycle
 {
     public function run($object)
     {
-        $this->lib->callAction($object, 'pi');
+        $run_param = $this->lib->createRunParam();
+        $this->lib->setObject($run_param, $object);
+        $this->lib->setName($run_param, 'pi');
+        $action = $this->lib->createAction($run_param);
+        $this->lib->runAction($action);
 
         parent::run($object);
     }

@@ -11,6 +11,14 @@ class EatLifeCycle extends \ALifeCycle
 
     public function run($object)
     {
-        $this->lib->callAction($object, 'eat', ['food']);
+        $run_param = $this->lib->createRunParam();
+        $this->lib->setObject($run_param, $object);
+
+        // @todo
+        $this->lib->setName($run_param, 'eat');
+        $run_param->additionalParam = ['food'];
+        $action = $this->lib->createAction($run_param);
+
+        $this->lib->runAction($action);
     }
 }

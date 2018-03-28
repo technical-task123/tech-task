@@ -9,9 +9,10 @@ class Output extends \LibFunction
 
     public function run($action)
     {
-        $object = $action->runParam->object;
-        $action_name = $action->runParam->actionName;
-        $action_param = $action->runParam->additionalParam;
+        $run_param = $this->lib->getRunParam($action);
+        $object = $run_param->object;
+        $action_name = $run_param->name;
+        $action_param = $run_param->additionalParam ?? null;
 
         $message = $this->lib->getName($object) . ' ' . $action_name;
 

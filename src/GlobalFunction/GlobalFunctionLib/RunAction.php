@@ -16,7 +16,7 @@ class RunAction extends \LibFunction
             $initializer = $this->lib->createFunctionalObject($action->initializer);
             $initializer->run($action);
         } else {
-            $message = 'Action "' . $action->runParam->actionName
+            $message = 'Action "' . $action->runParam->name
                 . '" is not available for run with next param: '
                 . \print_r($action->runParam, true);
             \trigger_error($message, E_USER_NOTICE);

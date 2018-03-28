@@ -39,9 +39,10 @@ rat pi
 rat eat food
 monkey eat food";
 
-        $regexpExpectedError = '%Action "walk" is not available for run with next param: stdClass Object
-\(
-    \[object\] => Sparrow Object%';
+        $regexpExpectedError = [
+            '%Action "walking" is not available for run with next param:%',
+            '%\[object\] => Sparrow Object%'
+        ];
 
         $regexExpectedOutput = "/^$expectedNormal$/";
 
@@ -58,7 +59,9 @@ monkey eat food";
 
         self::assertCount(1, self::$error);
 
-        self::assertRegExp($regexpExpectedError, \current(self::$error));
+        foreach ($regexpExpectedError as $regexp) {
+            self::assertRegExp($regexp, \current(self::$error));
+        }
 
         self::assertRegExp($regexExpectedOutput, $output);
     }
