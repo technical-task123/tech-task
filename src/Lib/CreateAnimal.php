@@ -10,7 +10,7 @@ class CreateAnimal extends \LibFunction
     public function run($name, $class = \Animal::class)
     {
 
-        $animal = $this->lib->base->createObject($class);
+        $animal = $this->lib->createObject($class);
         $this->lib->setName($animal, $name);
         return $animal;
     }

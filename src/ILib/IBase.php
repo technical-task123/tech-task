@@ -16,7 +16,7 @@ namespace DanchukAS\AmadeusTechTask123\ILib;
  * =========================================
  *
  * @method createFunctionalObject($class = null) {
- * @see \DanchukAS\AmadeusTechTask123\Lib\Base\CreateFunctionalObject::run
+ * @see \DanchukAS\AmadeusTechTask123\Lib\CreateFunctionalObject::run
  * }
  *
  * @method createObject(string $class_name = null) {
@@ -24,7 +24,7 @@ namespace DanchukAS\AmadeusTechTask123\ILib;
  * }
  *
  * @method output($message) {
- * @see \DanchukAS\AmadeusTechTask123\Lib\Base\Output::run
+ * @see \DanchukAS\AmadeusTechTask123\Lib\Output::run
  * }
  */
 interface IBase

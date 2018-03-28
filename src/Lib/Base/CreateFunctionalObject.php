@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DanchukAS\AmadeusTechTask123\Lib\Base;
+namespace DanchukAS\AmadeusTechTask123\Lib;
 
 
 class CreateFunctionalObject extends \LibFunction
@@ -9,7 +9,7 @@ class CreateFunctionalObject extends \LibFunction
 
     public function run($class = null)
     {
-        $object = $this->lib->base->createObject($class);
+        $object = $this->lib->createObject($class);
 
         $this->lib->setLib($object, $this->lib);
 

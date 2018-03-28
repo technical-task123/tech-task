@@ -16,10 +16,11 @@ declare(strict_types=1);
  *
  * @see \DanchukAS\AmadeusTechTask123\Lib All benefits of "\DanchukAS\AmadeusTechTask123\Lib".
  *
+ * @since 1.0.5 Change namespace from "DanchukAS\AmadeusTechTask123\Lib\Base" to "DanchukAS\AmadeusTechTask123\Lib"
  * @since 1.0.1 First time this was introduced.
  */
 
-namespace DanchukAS\AmadeusTechTask123\Lib\Base;
+namespace DanchukAS\AmadeusTechTask123\Lib;
 
 
 /**

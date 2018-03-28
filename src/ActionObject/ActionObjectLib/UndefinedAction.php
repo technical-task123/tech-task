@@ -13,5 +13,5 @@ use DanchukAS\AmadeusTechTask123\Action;
 
 class UndefinedAction extends Action
 {
-    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\UndefinedAction::class;
+    public $initializer = \DanchukAS\AmadeusTechTask123\ActionFunctionLib\UndefinedAction::class;
 }

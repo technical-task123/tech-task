@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DanchukAS\AmadeusTechTask123\Lib\Base;
+namespace DanchukAS\AmadeusTechTask123\Lib;
 
 
 class Output extends \LibFunction

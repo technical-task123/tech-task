@@ -16,5 +16,5 @@ class Walk extends Action
 {
     use \TNeedVerifyAvailable, TAvailableWalk;
 
-    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\Walk::class;
+    public $initializer = \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Walk::class;
 }

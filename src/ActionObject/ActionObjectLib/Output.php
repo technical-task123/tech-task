@@ -13,6 +13,6 @@ use DanchukAS\AmadeusTechTask123\Action;
 
 class Output extends Action
 {
-    public $initializer = \DanchukAS\AmadeusTechTask123\Lib\Action\Output::class;
+    public $initializer = \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Output::class;
 
 }

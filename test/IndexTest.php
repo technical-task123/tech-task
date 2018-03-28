@@ -19,7 +19,7 @@ class IndexTest extends TestCase
      */
     function resetError()
     {
-        self::$error = '';
+        self::$error = [];
     }
 
     public function testOutput()
@@ -45,7 +45,7 @@ monkey eat food";
         $regexExpectedOutput = "/^$expectedNormal$/";
 
         \set_error_handler(function ($errno, $mesage) {
-            IndexTest::$error = $mesage;
+            IndexTest::$error[] = $mesage;
         });
 
         \ob_start();
@@ -55,7 +55,9 @@ monkey eat food";
 
         \restore_error_handler();
 
-        self::assertRegExp($regexpExpectedError, self::$error);
+        self::assertCount(1, self::$error);
+
+        self::assertRegExp($regexpExpectedError, \current(self::$error));
 
         self::assertRegExp($regexExpectedOutput, $output);
     }

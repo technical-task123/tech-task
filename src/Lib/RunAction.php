@@ -13,7 +13,7 @@ class RunAction extends \LibFunction
     {
 
         if ($this->lib->isAvailableActionRun($action)) {
-            $initializer = $this->lib->base->createFunctionalObject($action->initializer);
+            $initializer = $this->lib->createFunctionalObject($action->initializer);
             $initializer->run($action);
         } else {
             $message = 'Action "' . $action->runParam->actionName

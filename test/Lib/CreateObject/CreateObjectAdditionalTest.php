@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace DanchukAS\AmadeusTechTask123Test\Lib\CreateObject;
 
-use DanchukAS\AmadeusTechTask123\Lib\Base\CreateObject;
 use DanchukAS\AmadeusTechTask123Test\Provider\AnyClassNameProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -27,8 +26,6 @@ class CreateObjectAdditionalTest extends TestCase
     /**
      * Default value present because "@depend CreateObjectBaseTest::testClassExist" not work
      *
-     *
-     * @return CreateObject
      */
     public function testCreateInstance($tested_class_name = CreateObjectBaseTest::TESTED_CLASS_NAME)
     {
@@ -128,7 +125,7 @@ class CreateObjectAdditionalTest extends TestCase
 
         $class = $param ?? \stdClass::class;
 
-        $message = 'Created object by "CreateObject" is not identify created with "new"';
+        $message = 'Created object by "' . CreateObjectBaseTest::TESTED_CLASS_NAME . '" is not identify created by "new"';
         self::assertEquals(new $class, $object, $message);
     }
 
