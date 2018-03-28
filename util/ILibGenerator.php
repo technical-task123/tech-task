@@ -24,6 +24,12 @@ $this_file = str_replace($project_dir . DIRECTORY_SEPARATOR, '', __FILE__);
 
 getLibMethods($dir, $dir_dest, 'DanchukAS\AmadeusTechTask123');
 
+getLibMethods(
+    $project_dir . '/src/ActionFunction/ActionFunctionLib',
+    $project_dir . '/src/ActionFunction',
+    'DanchukAS\AmadeusTechTask123'
+);
+
 
 function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null)
 {
