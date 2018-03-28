@@ -16,119 +16,119 @@ namespace DanchukAS\AmadeusTechTask123;
  * =========================================
  *
  * @method createFunctionalObject($class = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateFunctionalObject::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateFunctionalObject::run
  * }
  *
  * @method createObject(string $class_name = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateObject::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateObject::run
  * }
  *
  * @method output($message) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Output::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Output::run
  * }
  *
  * @method buildZoo($animal_collection = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\BuildZoo::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\BuildZoo::run
  * }
  *
  * @method callAction($object, string $action_name, array $action_param = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CallAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CallAction::run
  * }
  *
  * @method createAction(\ARunParam $runParam, $class = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAction::run
  * }
  *
  * @method createAnimal($name, $class = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAnimal::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateAnimal::run
  * }
  *
  * @method createRunParam(string $class = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateRunParam::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateRunParam::run
  * }
  *
  * @method createZoo($class = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateZoo::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\CreateZoo::run
  * }
  *
  * @method getAbilityForAction($action) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetAbilityForAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetAbilityForAction::run
  * }
  *
  * @method getActionClass($action, $object = null) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionClass::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionClass::run
  * }
  *
  * @method string getActionClassName($object, $action_method_name) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionClassName::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionClassName::run
  * }
  *
  * @method getActionLib() {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionLib::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionLib::run
  * }
  *
  * @method string getActionMethodName($action) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionMethodName::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetActionMethodName::run
  * }
  *
  * @method array getAnimalCollection(\IHasAnimalCollection $object) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetAnimalCollection::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetAnimalCollection::run
  * }
  *
  * @method getLifeCycle(\IHasLifeCycle $object) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetLifeCycle::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetLifeCycle::run
  * }
  *
  * @method getName(\IHasName $object) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetName::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetName::run
  * }
  *
  * @method getRunParam(\IHasRunParam $object) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetRunParam::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\GetRunParam::run
  * }
  *
  * @method initAmadeusZooAnimalCollection() {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\InitAmadeusZooAnimalCollection::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\InitAmadeusZooAnimalCollection::run
  * }
  *
  * @method isAvailableActionRun($action) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\IsAvailableActionRun::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\IsAvailableActionRun::run
  * }
  *
  * @method live($object) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Live::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\Live::run
  * }
  *
  * @method mergeRunParam(\IHasRunParam $object, \ARunParam ...$additionRunParam) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\MergeRunParam::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\MergeRunParam::run
  * }
  *
  * @method runAction(AAction $action) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\RunAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\RunAction::run
  * }
  *
  * @method void runNewAction($action_class, $run_param) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\RunNewAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\RunNewAction::run
  * }
  *
  * @method setAnimalCollection(\IHasAnimalCollection $object, $collection) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetAnimalCollection::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetAnimalCollection::run
  * }
  *
  * @method setLib($object, $lib) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetLib::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetLib::run
  * }
  *
  * @method setName(\IHasName $object, $name) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetName::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetName::run
  * }
  *
  * @method setObject(\IHasObject $object, $propertyObject) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetObject::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetObject::run
  * }
  *
  * @method setRunParam(\IHasRunParam $object, \ARunParam $runParam) {
- * @uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetRunParam::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\GlobalFunctionLib\SetRunParam::run
  * }
  */
 interface IGlobalFunctionLib

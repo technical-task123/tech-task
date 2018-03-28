@@ -16,15 +16,15 @@ namespace DanchukAS\AmadeusTechTask123;
  * =========================================
  *
  * @method output($action) {
- * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Output::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Output::run
  * }
  *
  * @method undefinedAction(AAction $action) {
- * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\UndefinedAction::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\UndefinedAction::run
  * }
  *
  * @method walk(AAction $action) {
- * @uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Walk::run
+ * 	@uses \DanchukAS\AmadeusTechTask123\ActionFunctionLib\Walk::run
  * }
  */
 interface IActionFunctionLib
