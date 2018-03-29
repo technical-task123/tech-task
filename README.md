@@ -7,17 +7,68 @@
 
 # Finalised files:
 - src/GlobalFunction/GlobalFunctionLib/Base/CreateObject.php
-- apache.conf  - way of my thinks and result.
+- apache.conf
 - Dockerfile
+
+# Architecture design
+- not mix up "functions" with "entity". Easy for:
+  - write fully exhaustive small tests, 
+  - load viewed code in mind and unload unnecessary ones, 
+  - safely reusing without refactor now of in future, 
+  - omnifarious inherits without inherits unnecessary properties or methods, 
+  - easy review - what fully exhaustive affect do changes.
+  - easy see what changed
+  
+  - "entity" is collection of properties. 
+    Exclude from rule is method Init/__construct when setted default values for properties.
+  
+  - "function" only do something with "entities", for example changed them.
+  
+- Not use any construction twice. Exclude situation where it is really necessary.
+  Benefits: 
+  - Minimise time for scale app using uniform objects/functions.
+  - Minimise time for testing new features because need test only new feature, 
+    without existed setters, getters, and other reusable functions.
+  - Make injection very easy - all same actions is implemented in one place.
+  - Really increase affect from previous rule. 
+  
+  Example:
+  
+  - instead many "new <class>" 
+    use $this->lib->createObject(<class>::class)
+    
+  - instead of add method setName to many classes 
+    create function $this->lib->setName($object, $name)
+
+- Not add more than 1 public method to 1 class.
+  Benefits:
+  - files will be more readable.
+  - functions wil be more isolated. Easy for testing, understanding, reusing.
+  - autoload only really used functions. Tiny increasing of speed, really decrease of required RAM. 
+  - help to follow last previous rule.
+  - really increase affect from first rule.
+  You can use $this->lib for call another classes.
+
+- Use functions by property $lib, and create Objects by $this->lib->CreateFunctionalObject(<class>).
+  Global object with access to all project's functions existed in all necessary objects as property $lib.  
+  Benefits:
+  - is available substituting any function in any necessary moment and place.
+  - it implements second rule.
+
 
 # Especially files
 - test/Lib/CreateObject/CreateObjectBaseTest.php as example of easy check and for remember:
   - what class has changed namespace (specially or accidentally(!))
   - what class has ceased to exist.
 - test/Lib/CreateObject/CreateObjectAdditionalTest.php as example of right relations in tests:
-  - tests where called method "run" have not reason call while test for method "run" is not successfully. 
+  - tests where called method "run" have not reason call 
+    while test for method "run" is not successfully. 
   - when possible used DRY for tests.  
   - used data providers for compact cover of most possible situations.
+
+# Especially property $lib
+Exist in most classes.
+Give access to most project's functions.
      
 # Useful test    
    - /test/indexTest.php verify stdout and stderr after call public/index.php.
@@ -27,7 +78,7 @@
   to right and fully understand all risk before edited the code.
   - Comments answer on questions
     - why next code/directive need there ? 
-    - why not in another way ?
+    - why it is best way ?
     - what to do there in future and why ? by @todo
     - when modified code ? Comment with @since. 
     - who modified code ? Comment with @author. Who can help.
@@ -88,6 +139,17 @@
       after create files or after edit class names or namespace.
 - util/ILibGenerator generate interfaces for "middleware classes" 
   which has __call instead implementation of methods.      
+- add @property for inerfaces and add related traits. Relate by @uses. 
+  Interfaces and traits used both in abstract classes.
+  
+  Because: 
+  - interfaces cat not have $properties. 
+  - php classes can not extend more than 1 parent class.
+  
+  Example:
+  - IHasAnimalCollection
+  - THasAnimalCollection
+  - AZoo
   
 # Directory structure of project:
 - public Place for accessible files for web server
@@ -109,7 +171,9 @@
 - util/ILibGenerator.php Generate interfaces for possible IDE auto complete methods 
   of some classes as GlobalFunction, ActionFunction.
 - ALib Realise 1 file = 1 class = 1 method. Any subdirectories for group files. 
-  Subdirectories have not any affect. They increase usefully search necessaries files. 
+  Subdirectories have not any affect. They increase usefully search necessaries files.
+- src/ActionObject/TNeedVerifyAvailable Control availability run action on objects.
+  Include to necessary "ActionObjects" as Walk.
 - test/TestCase.php It is parent only for base test of classes.
 - apache.conf Available run script by browser. Used by Dockerfile.
 - composer.json Autoloader by class map, provide phpunit.

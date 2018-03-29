@@ -15,8 +15,11 @@ use PHPUnit\Framework\TestCase;
 /**
  * Class CreateObjectAdditionalTest
  *
+ * Test functionality of
+ * @see CreateObjectBaseTest::TESTED_CLASS_NAME
+ *
  * Property $lib, type \LibFunction are not tested because are now not used.
- * They should be tested in "DanchukAS\AmadeusTechTask123\Lib" tests.
+ * And they should be tested in "DanchukAS\AmadeusTechTask123\Lib" tests.
  *
  * @package DanchukAS\AmadeusTechTask123Test
  */
@@ -25,7 +28,6 @@ class CreateObjectAdditionalTest extends TestCase
 
     /**
      * Default value present because "@depend CreateObjectBaseTest::testClassExist" not work
-     *
      */
     public function testCreateInstance($tested_class_name = null)
     {
@@ -106,11 +108,11 @@ class CreateObjectAdditionalTest extends TestCase
      */
     public function testSamenestCreatedObjects($class, $instance_tested_class)
     {
-        $instance1 = $instance_tested_class->run($class);
-        $instance2 = $instance_tested_class->run($class);
+        $created_instance_1 = $instance_tested_class->run($class);
+        $created_instance_2 = $instance_tested_class->run($class);
 
         $message = 'Return same instance instead new instance.';
-        self::assertNotSame($instance1, $instance2, $message);
+        self::assertNotSame($created_instance_1, $created_instance_2, $message);
     }
 
 
