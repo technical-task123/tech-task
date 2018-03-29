@@ -1,0 +1,36 @@
+# .travis.yml
+language: php
+
+# Do not forget to provide your CODACY_PROJECT_TOKEN as described in https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
+
+php:
+  - 7.2
+  # for find out max version php
+  - nightly
+
+before_install:
+  # for codecov.io
+  - sudo pip install codecov
+
+# In case of timeouts and build failures you may want to prepend 'travis_retry' to the following commands:
+before_script:
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install -n
+
+script:
+  #codacy.com and etc...
+  - vendor/bin/phpunit
+  # for codecov
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+  # check only travis
+  - vendor/bin/behat
+
+after_script:
+  # for codacy.com
+  - vendor/bin/codacycoverage clover /tmp/coverage.xml
+  # next all for scrutinizer-ci.com
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover /tmp/coverage.xml
+
+after_success:
+  - codecov

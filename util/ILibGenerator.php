@@ -34,8 +34,8 @@ getLibMethods(
 function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_object = null, $lib_name = null, $first_dir = null, $return = false)
 {
 
-    $r = new \ReflectionMethod(\ALib::class, 'getCalledClassName');
-    $r->setAccessible(true);
+    $getCalledClassName = new \ReflectionMethod(\ALib::class, 'getCalledClassName');
+    $getCalledClassName->setAccessible(true);
 
     if (null === $lib_object) {
         $lib_object = $namespace . '\\' . basename($dir);
@@ -56,13 +56,13 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
 
     $body = [];
 
-    $m = \scandir($dir, SCANDIR_SORT_ASCENDING);
-    $m = \array_slice($m, 2);
+    $dir_member_list = \scandir($dir, SCANDIR_SORT_ASCENDING);
+    $dir_member_list = \array_slice($dir_member_list, 2);
 
 //    $child_dir_dest = $dir_dest . DIRECTORY_SEPARATOR . $lib_name;
 //    $child_namespace = $namespace . '\\' . $lib_name;
 
-    foreach ($m as $filename) {
+    foreach ($dir_member_list as $filename) {
 
         $child_dir = $dir . DIRECTORY_SEPARATOR . $filename;
         if (is_dir($child_dir)) {
@@ -85,7 +85,7 @@ function getLibMethods($dir, $dir_dest, $namespace = '', $path = null, $lib_obje
         $method = lcfirst($class);
 
 
-        $class = $r->invoke($lib_object, $method);
+        $class = $getCalledClassName->invoke($lib_object, $method);
 
         $func = new \ReflectionMethod($class, 'run');
 

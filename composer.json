@@ -18,7 +18,9 @@
     "php": ">=7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "@stable"
+    "phpunit/phpunit": "@stable",
+    "codacy/coverage": "~1.1",
+    "phpmetrics/phpmetrics": "~2.2"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -26,5 +28,10 @@
     "classmap": [
       "test"
     ]
+  },
+  "config": {
+    "preferred-install": {
+      "*": "source"
+    }
   }
 }
