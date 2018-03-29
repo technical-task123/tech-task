@@ -1,0 +1,38 @@
+{
+  "homepage": "https://github.com/danchukas/tech-task",
+  "name": "danchukas/tech-task123",
+  "license": "proprietary",
+  "description": "task from Amadeus",
+  "authors": [
+    {
+      "name": "Danchuk Anatoliy",
+      "email": "volk160590@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  },
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7@stable",
+    "codacy/coverage": "~1.4",
+    "phpmetrics/phpmetrics": "~2.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload-dev": {
+    "classmap": [
+      "test"
+    ]
+  },
+  "config": {
+    "preferred-install": {
+      "*": "source"
+    }
+  }
+}

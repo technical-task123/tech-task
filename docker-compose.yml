@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  app:
+    build: .
+    ports:
+      - '8099:8099'
+    volumes:
+      - ./:/data/tech_task_123
