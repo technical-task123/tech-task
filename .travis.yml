@@ -22,8 +22,6 @@ script:
   - vendor/bin/phpunit
   # for codecov
   - vendor/bin/phpunit --coverage-clover=coverage.xml
-  # check only travis
-  - vendor/bin/behat
 
 after_script:
   # for codacy.com

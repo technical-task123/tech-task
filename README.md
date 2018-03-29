@@ -1,3 +1,7 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/build.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 # How check result
 - checkout repo
 - run docker compose
