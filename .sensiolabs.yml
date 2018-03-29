@@ -1,7 +1,8 @@
 # Configure the PHP version SensioLabsInsight should use to analyze
 # your project. It can be defined to 5, 7.0, or 7.1. If not
 # present, it will prefer 7.1 but fallback to 5 if errored.
-php_version: 7.2
+# PHP version "7.2" is not available. okay, let's 7.1 :)
+php_version: 7.1
 
 # Configure the failure conditions for your commit status.
 # If at least one of these conditions is verified, the commit status is displayed as failed.

@@ -1,6 +1,9 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/build.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/build-status/master)
+[![Dependency Status](https://www.versioneye.com/user/projects/5abc371d0fb24f0ac49c3956/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5abc371d0fb24f0ac49c3956)
+[![codecov](https://codecov.io/gh/danchukas/tech-task/branch/master/graph/badge.svg)](https://codecov.io/gh/danchukas/tech-task)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cff74b5f58964dccbb0cf73ae2f272d0)](https://www.codacy.com/app/volk160590/tech-task?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danchukas/tech-task&amp;utm_campaign=Badge_Grade)
 
 # How check result
 - checkout repo
