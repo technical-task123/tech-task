@@ -1,6 +1,7 @@
 {
   "homepage": "https://github.com/danchukas/tech-task",
   "name": "danchukas/tech-task123",
+  "license": "proprietary",
   "description": "task from Amadeus",
   "authors": [
     {
@@ -15,11 +16,11 @@
     ]
   },
   "require": {
-    "php": ">=7.1"
+    "php": "^7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "@stable",
-    "codacy/coverage": "~1.1",
+    "phpunit/phpunit": "~7@stable",
+    "codacy/coverage": "~1.4",
     "phpmetrics/phpmetrics": "~2.2"
   },
   "minimum-stability": "dev",

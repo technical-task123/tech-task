@@ -1,4 +1,4 @@
-[![Build Status](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/build.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/build-status/master)
+[![Build Status](https://travis-ci.org/danchukas/tech-task.svg?branch=master)](https://travis-ci.org/danchukas/tech-task)
 [![Dependency Status](https://www.versioneye.com/user/projects/5abc371d0fb24f0ac49c3956/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5abc371d0fb24f0ac49c3956)
 [![codecov](https://codecov.io/gh/danchukas/tech-task/branch/master/graph/badge.svg)](https://codecov.io/gh/danchukas/tech-task)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/danchukas/tech-task/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/danchukas/tech-task/?branch=master)
