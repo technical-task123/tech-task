@@ -44,6 +44,16 @@ class Animal
     {
         echo $this->name . ' pi';
     }
+
+    public function tweet()
+    {
+        echo $this->name . ' tweet';
+    }
+
+    public function eat(string $object)
+    {
+        echo $this->name . ' eats ' . $object;
+    }
 }
 
 $animals = [
