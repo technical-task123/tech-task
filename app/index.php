@@ -1,6 +1,10 @@
 <?php
 
-require_once 'src/class/Animal.php';
+namespace App;
+
+require_once 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+use \App\Zoo\Animal;
 
 $animals = [
     new Animal('cat'), new Animal('dog'), new Animal('sparrow'), new Animal('rat')
