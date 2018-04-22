@@ -16,5 +16,8 @@ services:
         image: php:7.0-fpm
         container_name: php-fpm
         volumes:
-            - ./app:/var/www/zoo
+            - ./app:/var/www/zoo/
+        environment:
+            - ZOO_DEBUG_MODE=1
+
 

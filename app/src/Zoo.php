@@ -53,7 +53,14 @@ class Zoo
      */
     public function addAnimal(string $animalName)
     {
-        $this->pool[] = AnimalFactory::create($animalName);
+        try {
+            $this->pool[] = AnimalFactory::create($animalName);
+        } catch (\Exception $e) {
+            trigger_error(
+                'Can not add animal ' . var_export($animalName) . ' to the zoo. Error: ' . $e->getMessage(),
+                E_USER_WARNING
+            );
+        }
     }
 
     /**

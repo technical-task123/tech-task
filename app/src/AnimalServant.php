@@ -39,7 +39,15 @@ class AnimalServant
         $result = '';
         $abilities = $animal->getAbilities();
         foreach ($abilities as $ability) {
-            $result .= call_user_func([$animal, $ability], $this->abilityObjects[$ability] ?? []);
+            try {
+                $result .= call_user_func([$animal, $ability], $this->abilityObjects[$ability] ?? []);
+            } catch (\Exception $e) {
+                trigger_error(
+                    'Can not treat the animal ability ' . var_export($ability, 1)
+                    . '. Error: ' . $e->getMessage(),
+                    E_USER_WARNING
+                );
+            }
         }
         return $result;
     }

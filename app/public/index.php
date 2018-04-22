@@ -3,14 +3,17 @@
 /**
  * index.php
  *
+ * PHP version 7.0
+ *
  * Index file of Zoo application
  *
- * @author Igor <igor.shp@i.ua>
+ * @author Igor S <igor.shp@i.ua>
  */
 
 namespace App;
 
-require_once '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require_once '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php';
+require_once AUTOLOADER_PATH;
 
 use App\Zoo\Zoo;
 
