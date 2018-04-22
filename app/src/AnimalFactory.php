@@ -11,6 +11,7 @@
  */
 
 namespace App\Zoo;
+
 use App\Zoo\animals\Animal;
 
 /**

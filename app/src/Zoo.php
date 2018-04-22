@@ -23,6 +23,11 @@ class Zoo
     private $pool = [];
 
     /**
+     * @var AnimalServant
+     */
+    private $animalServant;
+
+    /**
      * Zoo constructor.
      *
      * @param array $animals
@@ -31,6 +36,7 @@ class Zoo
      */
     public function __construct(array $animals = [])
     {
+        $this->animalServant = new AnimalServant();
         if (!empty($animals)) {
             foreach ($animals as $animalName) {
                 $this->addAnimal($animalName);
@@ -60,5 +66,19 @@ class Zoo
         foreach ($this->pool as $animal) {
             yield $animal;
         }
+    }
+
+    /**
+     * Treat animals in the zoo
+     *
+     * @return string
+     */
+    public function treatAnimals()
+    {
+        $result = '';
+        foreach ($this->getAnimal() as $animal) {
+            $result .= $this->animalServant->treat($animal);
+        }
+        return $result;
     }
 }
