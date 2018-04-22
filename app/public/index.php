@@ -12,11 +12,15 @@ namespace App;
 
 require_once '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
-use \App\Zoo\animals;
+use App\Zoo\AnimalFactory;
 
-$animals = [
-    new animals\Cat, new animals\Dog, new animals\Sparrow, new animals\Rat
-];
+$animalsList = ['cat', 'dog', 'sparrow', 'rat',];
+
+$animalFactory = new AnimalFactory();
+
+foreach ($animalsList as $animalName) {
+    $animals[] = $animalFactory->create($animalName);
+}
 
 $result = '';
 
