@@ -1,26 +1,22 @@
-# It Group PHP Developer Technical Task
+# It Group PHP Developer Technical Task (Done)
 
 ## Overview
 
-Hello %username%. Here would be your start point in big company. This task is like a game and I hope it would
-be interesting. In any case, imagine a zoo. It contains animals. Animals like birds, fish, etc. These animals have 
-their abilities, for instance, birds can fly, fish can swim, monkeys can walk. Every animal has to eat, that's why 
-every animal has such ability. There are several issues and we hope you'd solve them for us.
+It is completed technical test task. The list of general changes is provided below.
    
-## Instructions
+## General changes
 
-* Fork this repository
-* Look at our code, believe me, it's kinda shitty
-* Make this code as good as you can
-  * Make as many commits as you want
-  * Show us your power
-* Push into your repository
-* Create a Pull Request to our repository
-* Ping us to check
-* ~Wait until our CI commit into your branch a new file with new instructions (in progress, hasn't been done yet)~
+* Fixed fatal errors.
+* Was made refactoring according using some design patterns.
+* Provided files for docker environment.
+* Added unit tests.
+* Coding styles were fixed according to PSR2-standarts.
 
-## Nice to have in result code
+## Installation
 
-* php 7
-* Unit tests
-* docker environment
+You can find run.sh script in the root of the project. 
+It will run docker environment, so you can check results at http://localhost/.
+
+
+
+
