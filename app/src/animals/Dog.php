@@ -12,11 +12,15 @@
 
 namespace App\Zoo\animals;
 
+use App\Zoo\animals\abilities\WalkingTrait;
+
 /**
  * @class Dog
  */
 class Dog extends Animal
 {
+    use WalkingTrait;
+
     /**
      * @var array
      */
@@ -65,13 +69,4 @@ class Dog extends Animal
         return $this->name . ' has bitten ' . $object;
     }
 
-    /**
-     * Method for walking
-     *
-     * @return string
-     */
-    public function walk() : string
-    {
-        return $this->name . ' is walking';
-    }
 }

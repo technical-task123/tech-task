@@ -12,11 +12,15 @@
 
 namespace App\Zoo\animals;
 
+use App\Zoo\animals\abilities\WalkingTrait;
+
 /**
  * @class Cat
  */
 class Cat extends Animal
 {
+    use WalkingTrait;
+
     /**
      * @var array
      */
@@ -35,15 +39,5 @@ class Cat extends Animal
     public function meow() : string
     {
         return $this->name . ' is meowing';
-    }
-
-    /**
-     * Method for walking
-     *
-     * @return string
-     */
-    public function walk() : string
-    {
-        return $this->name . ' is walking';
     }
 }

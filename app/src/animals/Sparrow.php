@@ -12,11 +12,15 @@
 
 namespace App\Zoo\animals;
 
+use App\Zoo\animals\abilities\WalkingTrait;
+
 /**
  * @class Sparrow
  */
 class Sparrow extends Animal
 {
+    use WalkingTrait;
+
     /**
      * @var array
      */
@@ -47,13 +51,4 @@ class Sparrow extends Animal
         return $this->name . ' is tweeting';
     }
 
-    /**
-     * Method for walking
-     *
-     * @return string
-     */
-    public function walk() : string
-    {
-        return $this->name . ' is walking';
-    }
 }
