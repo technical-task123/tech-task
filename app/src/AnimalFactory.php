@@ -27,7 +27,7 @@ class AnimalFactory
      *
      * @throws \Exception
      */
-    public function create(string $animalName) : Animal
+    public static function create(string $animalName) : Animal
     {
         if (empty($animalName)) {
             throw new \Exception('Empty input parameter $animalName');
