@@ -50,5 +50,4 @@ class Sparrow extends Animal
     {
         return $this->name . ' is tweeting';
     }
-
 }

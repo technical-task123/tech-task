@@ -68,5 +68,4 @@ class Dog extends Animal
 
         return $this->name . ' has bitten ' . $object;
     }
-
 }
