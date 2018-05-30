@@ -1,0 +1,12 @@
+{
+  "name": "Test",
+  "description": "Test zoo",
+  "autoload": {
+    "psr-4": {
+      "Test\\": "src/"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "^7"
+  }
+}
