@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Service;
 
 use PHPUnit\Framework\TestCase;
 use Test\Factory\AbstractAnimalFactory;
